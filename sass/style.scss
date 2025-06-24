@@ -1,0 +1,115 @@
+$bg-color: #F3F3F3;
+$grey-bg: #353535;
+$grey: #EAEAEA;
+$green: #99E2D0;
+$green-font: #008766;
+$blue: #89C8FA;
+$dark-blue: #003A68;
+$purple: #9356DC;
+$light-purple: #FF79DA;
+
+@mixin btn-gradient {
+    background: linear-gradient($purple, $light-purple)
+}
+@mixin lite-shadow {
+    box-shadow: 0px 4px 10px 0px rgba($color: #000000, $alpha: 0.15);
+}
+@mixin btn-shadow {
+    box-shadow: 0px 4px 10px 0px rgba($color: #000000, $alpha: 0.25);
+}
+@mixin place-shadow {
+    box-shadow: 0px 4px 4px 0px rgba($color: #000000, $alpha: 0.25);
+}
+@mixin card-choice-shadow {
+    box-shadow: 0px 4px 15px 0px rgba($color: #000000, $alpha: 0.1);
+}
+@mixin hdr-shadow {
+    box-shadow: 0px 2px 4px 0px rgba($color: #000000, $alpha: 0.15);
+}
+@mixin fonction-shadow {
+    box-shadow: 0px 4px 15px 0px rgba($color: #000000, $alpha: 0.15);
+}
+@mixin border-radius($radius){
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+* {margin: 0; padding: 0;}
+
+
+.hdr {
+    display: flex;
+    flex-direction: column;
+    height: 113px;
+    .topbar {
+        display: flex;
+        justify-content: center;
+        padding: 14px 89px;
+        @include hdr-shadow;
+        z-index: 2;
+        .logo {
+            padding-top: 2px;
+        }
+    }
+    .where {
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    gap: 17px;
+    background-color: $grey;
+    @include place-shadow;
+    z-index: 1;
+    .position {
+        font-size: 16px;
+        display: flex;
+        color: $grey-bg;
+        justify-content: center;
+        align-items: center;
+    }
+    .place {
+        width: 109px;
+        font-size: 16px;
+        font-weight: 500;
+        color: $grey-bg;
+        background: none;
+        border: none;
+    }
+    }
+}
+
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $bg-color;
+    height: 287px;
+    justify-content: center;
+    .sectiontitle {
+        height: 68px;
+        width: 275px;
+        text-align: center;
+        font-size: 24px;
+    }
+    .subtitle {
+        height: 46px;
+        width: 315px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 300;
+    }
+    .btn {
+        width: 218px;
+        height: 50px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+    }
+}
+
+
+   
