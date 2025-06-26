@@ -64,9 +64,6 @@
         font-size: 18px;
         font-weight: 300;
     }
-    &__btn {
-        font-size: 16px;
-    }
 }
 
 //------------------------------------ Instructions d'utilisation du site ------------------------------------//
@@ -235,24 +232,42 @@
             }
         }
         &_icon {
-            width: 25px;
-            height: 25px;
-            display: flex;
-            align-items: center;
-            &-idle {
-                width: inherit;
-                height: inherit;
-                display: inline;
-                z-index: 0;
-                &--heart {
-                    height: 22px;
-                    width: 21px;
+            display: inline-block;
+            &-svg {
+                width: 25px;
+                height: 25px;
+                fill: transparent;
+                stroke: #101010;
+                transition: fill 0.3s, stroke 0.3s;
+            }
+            &-input1[type=checkbox] {
+                display: none;
+                &:checked + label svg {
+                    fill: url(#heart-color1);
+                    stroke: url(#heart-color1);
                 }
             }
-            &-full {
+            &-input2[type=checkbox] {
                 display: none;
+                &:checked + label svg {
+                    fill: url(#heart-color2);
+                    stroke: url(#heart-color2);
+                }
             }
-        }
-        
+            &-input3[type=checkbox] {
+                display: none;
+                &:checked + label svg {
+                    fill: url(#heart-color3);
+                    stroke: url(#heart-color3);
+                }
+            }
+            &-input4[type=checkbox] {
+                display: none;
+                &:checked + label svg {
+                    fill: url(#heart-color4);
+                    stroke: url(#heart-color4);
+                }
+            }
+        }  
     }
 }

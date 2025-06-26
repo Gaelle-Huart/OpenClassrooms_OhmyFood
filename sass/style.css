@@ -16,13 +16,30 @@ body {
   width: 218px;
   height: 50px;
   color: white;
+  font-size: 16px;
   border-radius: 25px;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-  background: linear-gradient(#FF79DA, #9356DC);
+  background: linear-gradient(355deg, #9356DC -11%, #FF79DA 124%);
   text-align: center;
   vertical-align: middle;
   line-height: 50px;
   margin-top: 27px;
+}
+.about__btn:hover {
+  background: linear-gradient(355deg, #9b63df -11%, #ff88de 124%);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+  text-indent: -1%;
+}
+
+.purchase-button {
+  height: 50px;
+  color: white;
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(355deg, #9356DC -11%, #FF79DA 124%);
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
 }
 
 .header {
@@ -61,13 +78,30 @@ body {
   width: 218px;
   height: 50px;
   color: white;
+  font-size: 16px;
   border-radius: 25px;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-  background: linear-gradient(#FF79DA, #9356DC);
+  background: linear-gradient(355deg, #9356DC -11%, #FF79DA 124%);
   text-align: center;
   vertical-align: middle;
   line-height: 50px;
   margin-top: 27px;
+}
+.about__btn:hover {
+  background: linear-gradient(355deg, #9b63df -11%, #ff88de 124%);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+  text-indent: -1%;
+}
+
+.purchase-button {
+  height: 50px;
+  color: white;
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(355deg, #9356DC -11%, #FF79DA 124%);
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
 }
 
 .foot {
@@ -166,9 +200,6 @@ body {
   text-align: center;
   font-size: 18px;
   font-weight: 300;
-}
-.about__btn {
-  font-size: 16px;
 }
 
 .fonction {
@@ -341,21 +372,40 @@ body {
   font-weight: 300;
 }
 .card__info_icon {
+  display: inline-block;
+}
+.card__info_icon-svg {
   width: 25px;
   height: 25px;
-  display: flex;
-  align-items: center;
+  fill: transparent;
+  stroke: #101010;
+  transition: fill 0.3s, stroke 0.3s;
 }
-.card__info_icon-idle {
-  width: inherit;
-  height: inherit;
-  display: inline;
-  z-index: 0;
-}
-.card__info_icon-idle--heart {
-  height: 22px;
-  width: 21px;
-}
-.card__info_icon-full {
+.card__info_icon-input1[type=checkbox] {
   display: none;
+}
+.card__info_icon-input1[type=checkbox]:checked + label svg {
+  fill: url(#heart-color1);
+  stroke: url(#heart-color1);
+}
+.card__info_icon-input2[type=checkbox] {
+  display: none;
+}
+.card__info_icon-input2[type=checkbox]:checked + label svg {
+  fill: url(#heart-color2);
+  stroke: url(#heart-color2);
+}
+.card__info_icon-input3[type=checkbox] {
+  display: none;
+}
+.card__info_icon-input3[type=checkbox]:checked + label svg {
+  fill: url(#heart-color3);
+  stroke: url(#heart-color3);
+}
+.card__info_icon-input4[type=checkbox] {
+  display: none;
+}
+.card__info_icon-input4[type=checkbox]:checked + label svg {
+  fill: url(#heart-color4);
+  stroke: url(#heart-color4);
 }/*# sourceMappingURL=style.css.map */
