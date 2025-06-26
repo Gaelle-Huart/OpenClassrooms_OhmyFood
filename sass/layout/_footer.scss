@@ -1,0 +1,49 @@
+@import "../base/reset";
+@import "../base/typography";
+
+@import "../components/buttons";
+@import "../components/icons";
+
+@import "../utils/variables";
+
+.foot {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  background-color: $grey-bg;
+  padding: 22px 25px;
+  gap: 16px;
+  &__logo {
+    font-family: "Shrikhand", cursive;
+    font-weight: 400;
+    font-size: 18px;
+  }
+}
+
+.footnav {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  &__link {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    gap: 8px;
+    &_icon1 {
+      font-size: 13.25px;
+      padding-top: 2px;
+    }
+    &_icon2 {
+      font-size: 12.5px;
+      padding-top: 2px;
+      transform: scale(0.8, 1);
+    }
+    &_txt1 {
+      font-size: 16px;
+      padding-left: 4px;
+    }
+    &_txt {
+      font-size: 16px;
+    }
+  }
+}

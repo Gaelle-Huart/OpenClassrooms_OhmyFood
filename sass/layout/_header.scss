@@ -1,0 +1,18 @@
+@import "../utils/mixins";
+
+.header {
+    display: flex;
+    flex-direction: column;
+    height: 113px;
+}
+.ohmy {
+    display: flex;
+    justify-content: center;
+    padding: 14px 89px;
+    @include hdr-shadow;
+    z-index: 2;
+    &__logo {
+        height: 30px;
+        padding-top: 2px;
+    }
+}

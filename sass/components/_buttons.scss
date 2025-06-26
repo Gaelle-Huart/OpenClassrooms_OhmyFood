@@ -1,0 +1,14 @@
+@import "../utils/mixins";
+
+.about__btn {
+  width: 218px;
+  height: 50px;
+  color: white;
+  @include border-radius(25px);
+  @include btn-shadow;
+  @include btn-gradient;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+  margin-top: 27px;
+}

@@ -1,0 +1,33 @@
+@import "./variables";
+
+@mixin btn-gradient {
+    background: linear-gradient($light-purple, $purple)
+}
+@mixin lite-shadow {
+    box-shadow: 0px 4px 10px 0px rgba($color: #000000, $alpha: 0.15);
+}
+@mixin btn-shadow {
+    box-shadow: 0px 4px 10px 0px rgba($color: #000000, $alpha: 0.25);
+}
+@mixin place-shadow {
+    box-shadow: 0px 4px 4px 0px rgba($color: #000000, $alpha: 0.25);
+}
+@mixin card-choice-shadow {
+    box-shadow: 0px 4px 15px 0px rgba($color: #000000, $alpha: 0.1);
+}
+@mixin hdr-shadow {
+    box-shadow: 0px 2px 4px 0px rgba($color: #000000, $alpha: 0.15);
+}
+@mixin fonction-shadow {
+    box-shadow: 0px 4px 15px 0px rgba($color: #000000, $alpha: 0.15);
+}
+@mixin border-radius($radius){
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+@mixin center {
+    align-items: center;
+    justify-content: center;
+}
