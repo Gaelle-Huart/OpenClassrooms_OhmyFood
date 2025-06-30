@@ -4,15 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OhmyFood</title>
+    <!----------------------- Fonts ----------------------->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap">
+    <!----------------------- Font Awesome ----------------------->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!----------------------- CSS ----------------------->
     <link rel="stylesheet" href="sass/style.css" type="text/css">
 </head>
 
 <body>
-    <header class="header">
+    <!----------------------------------------------------------- Header ------------------------------------------------------------>
+    <header class="hdr">
         <div class="ohmy">
             <img class="ohmy__logo" src="assets/images/logo/ohmyfood.png" alt="logo de OhmyFood">
         </div>
@@ -22,41 +26,49 @@
             <input class="location__place" type="text" id=search placeholder="Paris, Belleville">
         </form>
     </header>
+
+    <!--------------------------------------------------------- Contenu ---------------------------------------------------------->
     <main class="container">
         <section class="about">
             <h1 class="about__title">Réservez le menu qui vous convient</h1>
             <p class="about__subtitle">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
             <a href="#restaurants" class="about__btn">Explorer nos restaurants</a>
         </section>
-        
+
+        <!------------------------------------------------------- Fonctionnement -------------------------------------------------------->
         <section class="fonction">
             <h2 class="fonction__title">Fonctionnement</h2>
-            <div class="fonction__step">
-                <div class="fonction__step_number">1</div>
-                <div class="fonction__step_info">
-                    <i class="fa-solid fa-mobile-screen-button fonction__step_info_icon" aria-hidden="true"></i>
-                    Choisissez un restaurant
+            <div class="instructions">
+                <div class="instructions__step">
+                    <div class="instructions__step_number">1</div>
+                    <div class="instructions__step_info">
+                        <i class="fa-solid fa-mobile-screen-button instructions__step_info_icon" aria-hidden="true"></i>
+                        Choisissez un restaurant
+                    </div>
                 </div>
-            </div>
-            <div class="fonction__step">
-                <div class="fonction__step_number">2</div>
-                <div class="fonction__step_info">
-                    <i class="fa-solid fa-list-ul fonction__step_info_icon" aria-hidden="true"></i>
-                    Composez votre menu
+                <div class="instructions__step">
+                    <div class="instructions__step_number">2</div>
+                    <div class="instructions__step_info">
+                        <i class="fa-solid fa-list-ul instructions__step_info_icon" aria-hidden="true"></i>
+                        Composez votre menu
+                    </div>
                 </div>
-            </div>
-            <div class="fonction__step">
-                <div class="fonction__step_number">3</div>
-                <div class="fonction__step_info">
-                    <i class="fa-solid fa-store fonction__step_info_icon--purple" aria-hidden="true"></i>
-                    Dégustez au restaurant
+                <div class="instructions__step">
+                    <div class="instructions__step_number">3</div>
+                    <div class="instructions__step_info">
+                        <i class="fa-solid fa-store instructions__step_info_icon--purple" aria-hidden="true"></i>
+                        Dégustez au restaurant
+                    </div>
                 </div>
             </div>
         </section>
         
+        <!--------------------------------------------------------- Restaurants ---------------------------------------------------------->
         <section id="restaurants" class="restaurants">
             <h2 class="restaurants__title">Restaurants</h2>
             <div class="restaurants__cards">
+
+                <!--------------------------------------------------- Palette du gout ---------------------------------------------------->
                 <a class="link" href="restaurants/palette.html">
                     <article class="card">
                         <div class="card__new1">Nouveau</div>
@@ -69,14 +81,14 @@
                                 <p class="card__info_txt_location">Ménilmontant</p>
                             </div>
                             <div class="card__info_icon">
-                                <input class="card__info_icon-input1" type="checkbox" id="color-trigger1">
-                                <label for="color-trigger1">    
+                                <input class="card__info_icon-input1" type="checkbox" id="color-trigger1"> <!-- détecte le clic -->
+                                <label for="color-trigger1"> <!-- associe le clic à l'input, for= permet de colorer l'icône -->
                                     <svg class="card__info_icon-svg" viewBox="0 0 24 23" xmlns="http://www.w3.org/2000/svg">
-                                        <path class="card__info_icon-idle--heart" d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C22.0187 4.12419 22.1558 8.32368 19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"/>
-                                        <defs>
+                                        <path d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C22.0187 4.12419 22.1558 8.32368 19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"/>
+                                        <defs> <!-- spécifie le dégradé à l'intérieur du coeur -->
                                             <linearGradient id="heart-color1" x1="0%" x2="0%" y1="0%" y2="100%">
-                                            <stop offset="0%" stop-color="#9356DC" />
-                                            <stop offset="100%" stop-color="#FF79DA" />
+                                                <stop offset="0%" stop-color="#9356DC" />
+                                                <stop offset="100%" stop-color="#FF79DA" />
                                             </linearGradient>
                                         </defs>
                                     </svg>
@@ -85,6 +97,8 @@
                         </div>
                     </article>
                 </a>
+
+                <!---------------------------------------------------- Note Enchantée ----------------------------------------------------->
                 <a class="link" href="restaurants/note.html">
                     <article class="card">
                         <div class="card__new2">Nouveau</div>
@@ -97,14 +111,14 @@
                                 <p class="card__info_txt_location">Charonne</p>
                             </div>
                             <div class="card__info_icon">
-                                <input class="card__info_icon-input2" type="checkbox" id="color-trigger2">
-                                <label for="color-trigger2">    
+                                <input class="card__info_icon-input2" type="checkbox" id="color-trigger2"> <!-- détecte le clic -->
+                                <label for="color-trigger2"> <!-- associe le clic à l'input, for= permet de colorer l'icône -->
                                     <svg class="card__info_icon-svg" viewBox="0 0 24 23" xmlns="http://www.w3.org/2000/svg">
-                                        <path class="card__info_icon-idle--heart" d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C22.0187 4.12419 22.1558 8.32368 19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"/>
-                                        <defs>
+                                        <path d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C22.0187 4.12419 22.1558 8.32368 19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"/>
+                                        <defs> <!-- spécifie le dégradé à l'intérieur du coeur -->
                                             <linearGradient id="heart-color2" x1="0%" x2="0%" y1="0%" y2="100%">
-                                            <stop offset="0%" stop-color="#9356DC" />
-                                            <stop offset="100%" stop-color="#FF79DA" />
+                                                <stop offset="0%" stop-color="#9356DC" />
+                                                <stop offset="100%" stop-color="#FF79DA" />
                                             </linearGradient>
                                         </defs>
                                     </svg>
@@ -113,6 +127,8 @@
                         </div>
                     </article>
                 </a>
+
+                <!---------------------------------------------------- La française ----------------------------------------------------->
                 <a class="link" href="restaurants/francaise.html">
                     <article class="card">
                         <div class="card__img">
@@ -124,14 +140,14 @@
                                 <p class="card__info_txt_location">Cité Rouge</p>
                             </div>
                             <div class="card__info_icon">
-                                <input class="card__info_icon-input3" type="checkbox" id="color-trigger3">
-                                <label for="color-trigger3">    
+                                <input class="card__info_icon-input3" type="checkbox" id="color-trigger3"> <!-- détecte le clic -->
+                                <label for="color-trigger3"> <!-- associe le clic à l'input, for= permet de colorer l'icône -->
                                     <svg class="card__info_icon-svg" viewBox="0 0 24 23" xmlns="http://www.w3.org/2000/svg">
-                                        <path class="card__info_icon-idle--heart" d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C22.0187 4.12419 22.1558 8.32368 19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"/>
-                                        <defs>
+                                        <path d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C22.0187 4.12419 22.1558 8.32368 19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"/>
+                                        <defs> <!-- spécifie le dégradé à l'intérieur du coeur -->
                                             <linearGradient id="heart-color3" x1="0%" x2="0%" y1="0%" y2="100%">
-                                            <stop offset="0%" stop-color="#9356DC" />
-                                            <stop offset="100%" stop-color="#FF79DA" />
+                                                <stop offset="0%" stop-color="#9356DC" />
+                                                <stop offset="100%" stop-color="#FF79DA" />
                                             </linearGradient>
                                         </defs>
                                     </svg>
@@ -140,6 +156,8 @@
                         </div>
                     </article>
                 </a>
+
+                <!--------------------------------------------------- Délice des sens ---------------------------------------------------->
                 <a class="link" href="restaurants/delice.html">
                     <article class="card">
                         <div class="card__img">
@@ -151,14 +169,14 @@
                                 <p class="card__info_txt_location">Folie-Méricourt</p>
                             </div>
                             <div class="card__info_icon">
-                                <input class="card__info_icon-input4" type="checkbox" id="color-trigger4">
-                                <label for="color-trigger4">    
+                                <input class="card__info_icon-input4" type="checkbox" id="color-trigger4"> <!-- détecte le clic -->
+                                <label for="color-trigger4"> <!-- associe le clic à l'input, for= permet de colorer l'icône -->
                                     <svg class="card__info_icon-svg" viewBox="0 0 24 23" xmlns="http://www.w3.org/2000/svg">
-                                        <path class="card__info_icon-idle--heart" d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C22.0187 4.12419 22.1558 8.32368 19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"/>
-                                        <defs>
+                                        <path d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C22.0187 4.12419 22.1558 8.32368 19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"/>
+                                        <defs> <!-- spécifie le dégradé à l'intérieur du coeur -->
                                             <linearGradient id="heart-color4" x1="0%" x2="0%" y1="0%" y2="100%">
-                                            <stop offset="0%" stop-color="#9356DC" />
-                                            <stop offset="100%" stop-color="#FF79DA" />
+                                                <stop offset="0%" stop-color="#9356DC" />
+                                                <stop offset="100%" stop-color="#FF79DA" />
                                             </linearGradient>
                                         </defs>
                                     </svg>
@@ -170,6 +188,8 @@
             </div>
         </section>
     </main>
+
+    <!----------------------------------------------------------- Footer ------------------------------------------------------------>
     <footer class="foot">
         <h2 class="foot__logo">ohmyfood</h2>
         <nav class="footnav">

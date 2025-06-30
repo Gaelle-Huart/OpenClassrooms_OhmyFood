@@ -1,0 +1,196 @@
+@import "./base/reset";
+@import "./base/typography";
+
+@import "./components/buttons";
+@import "./components/icons";
+
+@import "./layout/header";
+@import "./layout/footer";
+
+@import "./utils/variables";
+@import "./utils/mixins";
+
+.img {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 0;
+  &__setting {
+    width: inherit;
+    object-fit: cover;
+  }
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  border-radius: 55px 55px 0px 0px;
+  background-color: $bg-color;
+  margin-top: -50px;
+  padding: 32px 13px 32px 13px;
+  position: relative;
+  z-index: 1;
+}
+
+.menu-like {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  &__title {
+    font-family: "Shrikhand", cursive;
+    font-size: 28px;
+    font-weight: 400;
+  }
+  &__icon {
+    display: inline-block;
+    padding-right: 22px;
+    padding-top: 4px;
+    &_svg {
+      width: 23px;
+      height: 24px;
+      fill: transparent;
+      stroke: #101010;
+    }
+    &_input5[type=checkbox] {
+      display: none;
+      &:checked + label svg {
+        fill: url(#heart-color5);
+        stroke: url(#heart-color5);
+      }
+    }
+  }
+}
+
+.select {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  &__title {
+    text-transform: uppercase;
+    height: 27px;
+    font-size: 16px;
+    font-weight: 300;
+    position: relative;
+    &::after {
+      content: '';
+      width: 40px;
+      height: 3px;
+      background: $green;
+      left: 0;
+      position: absolute;
+      top: 27px;
+    }
+  }
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+.choice {
+  display: flex;
+  height: 72px;
+  width: 100%;
+  align-items: center;
+  cursor: pointer;
+  justify-content: space-between;
+  padding: 15px 0px 15px 15px;
+  background: white;
+  @include border-radius(15px);
+  border: none;
+  @include card-choice-shadow;
+  overflow: hidden;
+  &__txt {
+    display: flex;
+    width: 287px;
+    flex-direction: column;
+    gap: 5px;
+    overflow: hidden;
+    &__1 {
+      display: inline-block;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 100%;
+      text-align: start;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    &__2 {
+      display: inline-block;
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 100%;
+      text-align: start;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+  &__price {
+    display: flex;
+    height: 42px;
+    gap: 1px;
+    padding-left: 5px;
+    padding-right: 15px;
+    z-index: 1;
+    &__setting-N {
+      display: flex;
+      font-size: 15px;
+      font-weight: 700;
+      align-self: flex-end;
+    }
+    &__setting-E {
+      display: flex;
+      font-size: 15px;
+      font-weight: 700;
+      align-self: flex-end;
+    }
+  }
+}
+
+.check {
+  width: 59px;
+  height: 72px;
+  display: none;
+  background: $green;
+  @include border-radius(0px 15px 15px 0px);
+  position: relative;
+  &__setting {
+    color: white;
+  }
+}
+
+.choice:hover .choice__price {
+  animation: right-slide .5s ease-in;
+}
+
+.choice:hover .check {
+  display: flex;
+  width: 74px;
+  align-items: center;
+  justify-content: center;
+  -webkit-animation: right-slide .5s ease-in;
+  animation: right-slide .5s ease-in;
+  transform-origin: right;
+}
+
+@keyframes right-slide {
+  from {
+    transform: translateX(59px);
+  }
+
+  to {
+    transform: translateX(0px);
+  }
+}
+
+.purchase {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}

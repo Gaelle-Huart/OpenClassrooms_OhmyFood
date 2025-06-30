@@ -12,6 +12,26 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+h2 {
+  font-family: "Roboto", sans-serif;
+}
+
+h3 {
+  font-family: "Roboto", sans-serif;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+}
+
+div {
+  font-family: "Roboto", sans-serif;
+}
+
+button {
+  font-family: "Roboto", sans-serif;
+}
+
 .about__btn {
   width: 218px;
   height: 50px;
@@ -20,29 +40,40 @@ body {
   border-radius: 25px;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   background: linear-gradient(355deg, #9356DC -11%, #FF79DA 124%);
+  border: none;
   text-align: center;
   vertical-align: middle;
   line-height: 50px;
   margin-top: 27px;
+  transition: all 0.3s ease-in-out;
 }
-.about__btn:hover {
+.about__btn:hover, .about__btn:focus {
   background: linear-gradient(355deg, #9b63df -11%, #ff88de 124%);
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
   text-indent: -1%;
 }
 
-.purchase-button {
+.purchase__btn {
+  width: 186px;
   height: 50px;
   color: white;
+  font-size: 16px;
   border-radius: 25px;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   background: linear-gradient(355deg, #9356DC -11%, #FF79DA 124%);
+  border: none;
   text-align: center;
   vertical-align: middle;
   line-height: 50px;
+  transition: all 0.3s ease-in-out;
+}
+.purchase__btn:hover, .purchase__btn:focus {
+  background: linear-gradient(355deg, #9b63df -11%, #ff88de 124%);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+  text-indent: -1%;
 }
 
-.header {
+.hdr {
   display: flex;
   flex-direction: column;
   height: 113px;
@@ -60,6 +91,30 @@ body {
   padding-top: 2px;
 }
 
+.hdr-menu {
+  display: flex;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.ohmy-menu {
+  width: 100%;
+  height: 63px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ohmy-menu__logo {
+  height: 30px;
+  padding-top: 2px;
+  justify-self: center;
+}
+.ohmy-menu__arrow {
+  position: absolute;
+  left: 17px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -74,6 +129,26 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+h2 {
+  font-family: "Roboto", sans-serif;
+}
+
+h3 {
+  font-family: "Roboto", sans-serif;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+}
+
+div {
+  font-family: "Roboto", sans-serif;
+}
+
+button {
+  font-family: "Roboto", sans-serif;
+}
+
 .about__btn {
   width: 218px;
   height: 50px;
@@ -82,26 +157,37 @@ body {
   border-radius: 25px;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   background: linear-gradient(355deg, #9356DC -11%, #FF79DA 124%);
+  border: none;
   text-align: center;
   vertical-align: middle;
   line-height: 50px;
   margin-top: 27px;
+  transition: all 0.3s ease-in-out;
 }
-.about__btn:hover {
+.about__btn:hover, .about__btn:focus {
   background: linear-gradient(355deg, #9b63df -11%, #ff88de 124%);
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
   text-indent: -1%;
 }
 
-.purchase-button {
+.purchase__btn {
+  width: 186px;
   height: 50px;
   color: white;
+  font-size: 16px;
   border-radius: 25px;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   background: linear-gradient(355deg, #9356DC -11%, #FF79DA 124%);
+  border: none;
   text-align: center;
   vertical-align: middle;
   line-height: 50px;
+  transition: all 0.3s ease-in-out;
+}
+.purchase__btn:hover, .purchase__btn:focus {
+  background: linear-gradient(355deg, #9b63df -11%, #ff88de 124%);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+  text-indent: -1%;
 }
 
 .foot {
@@ -214,12 +300,18 @@ body {
   font-weight: 700;
   padding-bottom: 5px;
 }
-.fonction__step {
+
+.instructions {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.instructions__step {
   display: flex;
   height: 72.38px;
   width: 335px;
 }
-.fonction__step_number {
+.instructions__step_number {
   display: flex;
   height: 24px;
   width: 24px;
@@ -232,7 +324,7 @@ body {
   background-color: #9356DC;
   border-radius: 25px;
 }
-.fonction__step_info {
+.instructions__step_info {
   display: flex;
   gap: 20px;
   align-items: center;
@@ -248,13 +340,13 @@ body {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
 }
-.fonction__step_info_icon {
+.instructions__step_info_icon {
   display: flex;
   padding-left: 30px;
   color: #7E7E7E;
   font-size: 19px;
 }
-.fonction__step_info_icon--purple {
+.instructions__step_info_icon--purple {
   display: flex;
   padding-left: 30px;
   color: #9356DC;

@@ -10,24 +10,35 @@
   @include border-radius(25px);
   @include btn-shadow;
   @include btn-gradient;
+  border: none;
   text-align: center;
   vertical-align: middle;
   line-height: 50px;
   margin-top: 27px;
-  &:hover {
+  transition: all .3s ease-in-out;
+  &:hover, &:focus {
     @include btn-gradient-hover;
     @include btn-hover-shadow;
     text-indent: -1%;
   }
 }
 
-.purchase-button {
+.purchase__btn {
+  width: 186px;
   height: 50px;
   color: white;
+  font-size: 16px;
   @include border-radius(25px);
   @include btn-shadow;
   @include btn-gradient;
+  border: none;
   text-align: center;
   vertical-align: middle;
   line-height: 50px;
+  transition: all .3s ease-in-out;
+  &:hover, &:focus {
+    @include btn-gradient-hover;
+    @include btn-hover-shadow;
+    text-indent: -1%;
+  }
 }

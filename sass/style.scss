@@ -73,12 +73,17 @@
     flex-direction: column;
     justify-content: center;
     padding: 47px 20px 67px 20px;
-    
     &__title {
         font-size: 24px;
         font-weight: 700;
         padding-bottom: 5px;
     }
+}
+
+.instructions {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
     &__step {
         display: flex;
         height: 72.38px;
