@@ -317,6 +317,7 @@ button {
 }
 
 .choice {
+  position: relative;
   display: flex;
   height: 72px;
   width: 100%;
@@ -332,13 +333,11 @@ button {
 }
 .choice__txt {
   display: flex;
-  width: 287px;
   flex-direction: column;
   gap: 5px;
   overflow: hidden;
 }
 .choice__txt__1 {
-  display: inline-block;
   font-size: 18px;
   font-weight: 500;
   line-height: 100%;
@@ -348,7 +347,6 @@ button {
   overflow: hidden;
 }
 .choice__txt__2 {
-  display: inline-block;
   font-size: 15px;
   font-weight: 300;
   line-height: 100%;
@@ -358,11 +356,16 @@ button {
   overflow: hidden;
 }
 .choice__price {
+  flex: 0 0 auto;
+  white-space: nowrap;
   display: flex;
   height: 42px;
   gap: 1px;
-  padding-left: 5px;
+  padding-left: 10px;
   padding-right: 15px;
+  transform: translateX(59px);
+  transition: all 0.3s ease;
+  margin-right: 59px;
   z-index: 1;
 }
 .choice__price__setting-N {
@@ -379,38 +382,76 @@ button {
 }
 
 .check {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 59px;
   height: 72px;
-  display: none;
   background: #99E2D0;
   border-radius: 0px 15px 15px 0px;
-  position: relative;
+  right: 0;
+  transform: translateX(59px);
+  transition: all 0.3s ease;
 }
 .check__setting {
   color: white;
 }
 
-.choice:hover .choice__price {
-  animation: right-slide 0.3s ease-in;
+input#entree1,
+input#entree2,
+input#entree3 {
+  display: none;
 }
 
-.choice:hover .check {
-  display: flex;
-  width: 74px;
-  align-items: center;
-  justify-content: center;
-  animation: right-slide 0.3s ease-in;
-  transform-origin: right;
+input#plat1,
+input#plat2,
+input#plat3 {
+  display: none;
 }
 
-@keyframes right-slide {
-  from {
-    transform: translateX(59px);
-  }
-  to {
-    transform: translateX(0px);
-  }
+input#dessert1,
+input#dessert2,
+input#dessert3 {
+  display: none;
 }
+
+input#entree1:checked + label .check,
+input#entree2:checked + label .check,
+input#entree3:checked + label .check {
+  transform: translateX(0);
+}
+
+input#entree1:checked + label .choice__price,
+input#entree2:checked + label .choice__price,
+input#entree3:checked + label .choice__price {
+  transform: translateX(0);
+}
+
+input#plat1:checked + label .check,
+input#plat2:checked + label .check,
+input#plat3:checked + label .check {
+  transform: translateX(0);
+}
+
+input#plat1:checked + label .choice__price,
+input#plat2:checked + label .choice__price,
+input#plat3:checked + label .choice__price {
+  transform: translateX(0);
+}
+
+input#dessert1:checked + label .check,
+input#dessert2:checked + label .check,
+input#dessert3:checked + label .check {
+  transform: translateX(0);
+}
+
+input#dessert1:checked + label .choice__price,
+input#dessert2:checked + label .choice__price,
+input#dessert3:checked + label .choice__price {
+  transform: translateX(0px);
+}
+
 .purchase {
   display: flex;
   align-content: center;

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu - La palette du goût</title>
+    <title>La palette du goût</title>
     <!----------------------- Fonts ----------------------->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,9 +53,8 @@
             <div class="select">
                 <h2 class="select__title">Entrées</h2>
                 <div class="select__items">
-                    <!--<input class="select__items_input1" type="radio" name="entrée" id="entrée" value="Fricassée d'escargots">
-                    <label class="select__items_choice" for="entrée"> tentative avortée car trop chronophage (à résoudre plus tard)-->
-                    <button class="choice">
+                    <input type="checkbox" name="entree1" id="entree1" value="Fricassée d'escargots">
+                    <label class="choice" for="entree1">
                         <div class="choice__txt"> <!---------- one ---------->
                             <h3 class="choice__txt__1">Fricassée d'escargots</h3>
                             <p class="choice__txt__2">Au piment d'Espelette</p>
@@ -67,10 +66,9 @@
                         <div class="check">
                             <i class="check__setting fa-sharp fa-solid fa-circle-check"></i>
                         </div>
-                    </button>
-                    <!--<input class="select__items_input1" type="radio" name="entrée" id="entrée" value="Foie gras">
-                    <label class="select__items_choice" for="entrée"> l'idée était de ne pouvoir sélectionner qu'un seul choix -->
-                    <button class="choice" type="button">
+                    </label>
+                    <input type="checkbox" name="entree2" id="entree2" value="Foie gras">
+                    <label class="choice" for="entree2">
                         <div class="choice__txt"> <!---------- two ---------->
                             <h3 class="choice__txt__1">Foie gras de canard mi-cuit</h3>
                             <p class="choice__txt__2">Et ses copeaux de truffe noire</p>
@@ -82,10 +80,9 @@
                         <div class="check">
                             <i class="check__setting fa-sharp fa-solid fa-circle-check"></i>
                         </div>
-                    </button>
-                    <!--<input class="select__items_input1" type="radio" id="entrée" name="entrée" value="Oeuf au plat">
-                    <label class="select__items_choice" for="entrée"> en se basant sur le modèle du coeur cliquable... -->
-                    <button class="choice" type="button">
+                    </label>
+                    <input type="checkbox" id="entree3" name="entree3" value="Oeuf au plat">
+                    <label class="choice" for="entree3">
                         <div class="choice__txt"> <!---------- three ---------->
                             <h3 class="choice__txt__1">Œuf au plat</h3>
                             <p class="choice__txt__2">Assaisonné à la truffe sur lit de caviar</p>
@@ -97,15 +94,16 @@
                         <div class="check">
                             <i class="check__setting fa-sharp fa-solid fa-circle-check"></i>
                         </div>
-                    </button>
+                    </label>
                 </div>
             </div>
 
             <!----------------------------------------------------- PLats ------------------------------------------------------>
             <div class="select">
-                <h2 class="select__title">Plats</h2>
+                <h2 class="select__title">Entrées</h2>
                 <div class="select__items">
-                    <button class="choice" type="button">
+                    <input type="checkbox" name="plat1" id="plat1" value="Filet de boeuf">
+                    <label class="choice" for="plat1">
                         <div class="choice__txt"> <!---------- one ---------->
                             <h3 class="choice__txt__1">Filet de bœuf aux herbes</h3>
                             <p class="choice__txt__2">Accompagné de sa ribambelle de légumes</p>
@@ -117,8 +115,9 @@
                         <div class="check">
                             <i class="check__setting fa-sharp fa-solid fa-circle-check"></i>
                         </div>
-                    </button>
-                    <button class="choice" type="button">
+                    </label>
+                    <input type="checkbox" name="plat2" id="plat2" value="Parmentier">
+                    <label class="choice" for="plat2">
                         <div class="choice__txt"> <!---------- two ---------->
                             <h3 class="choice__txt__1">Parmentier de queue de bœuf</h3>
                             <p class="choice__txt__2">À la truffe noire sur sa purée de panais</p>
@@ -130,8 +129,9 @@
                         <div class="check">
                             <i class="check__setting fa-sharp fa-solid fa-circle-check"></i>
                         </div>
-                    </button>
-                    <button class="choice" type="button">
+                    </label>
+                    <input type="checkbox" id="plat3" name="plat3" value="Filet de turbot">
+                    <label class="choice" for="plat3">
                         <div class="choice__txt"> <!---------- three ---------->
                             <h3 class="choice__txt__1">Filet de turbot</h3>
                             <p class="choice__txt__2">Aux agrumes</p>
@@ -143,15 +143,16 @@
                         <div class="check">
                             <i class="check__setting fa-sharp fa-solid fa-circle-check"></i>
                         </div>
-                    </button>
+                    </label>
                 </div>
             </div>
 
             <!----------------------------------------------------- Desserts ------------------------------------------------------>
             <div class="select">
-                <h2 class="select__title">Desserts</h2>
+                <h2 class="select__title">Entrées</h2>
                 <div class="select__items">
-                    <button class="choice" type="button">
+                    <input type="checkbox" name="dessert1" id="dessert1" value="Paris-Brest">
+                    <label class="choice" for="dessert1">
                         <div class="choice__txt"> <!---------- one ---------->
                             <h3 class="choice__txt__1">Paris-Brest</h3>
                             <p class="choice__txt__2">Revisité</p>
@@ -163,8 +164,9 @@
                         <div class="check">
                             <i class="check__setting fa-sharp fa-solid fa-circle-check"></i>
                         </div>
-                    </button>
-                    <button class="choice" type="button">
+                    </label>
+                    <input type="checkbox" name="dessert2" id="dessert2" value="Macaron">
+                    <label class="choice" for="dessert2">
                         <div class="choice__txt"> <!---------- two ---------->
                             <h3 class="choice__txt__1">Macaron au chocolat d'exception</h3>
                             <p class="choice__txt__2">Et glace à la vanille de Madagascar</p>
@@ -176,8 +178,9 @@
                         <div class="check">
                             <i class="check__setting fa-sharp fa-solid fa-circle-check"></i>
                         </div>
-                    </button>
-                    <button class="choice" type="button"> 
+                    </label>
+                    <input type="checkbox" id="dessert3" name="dessert3" value="Mousse au chocolat">
+                    <label class="choice" for="dessert3">
                         <div class="choice__txt"> <!---------- three ---------->
                             <h3 class="choice__txt__1">Mousse au chocolat</h3>
                             <p class="choice__txt__2">Au piment d'Espelette et à la truffe noire</p>
@@ -189,9 +192,10 @@
                         <div class="check">
                             <i class="check__setting fa-sharp fa-solid fa-circle-check"></i>
                         </div>
-                    </button>
+                    </label>
                 </div>
             </div>
+
             <div class="purchase">
                 <button class="purchase__btn" type="button" name="commander">
                     Commander
