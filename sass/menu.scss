@@ -166,7 +166,7 @@
 }
 
 .choice:hover .choice__price {
-  animation: right-slide .5s ease-in;
+  animation: right-slide .3s ease-in;
 }
 
 .choice:hover .check {
@@ -174,8 +174,8 @@
   width: 74px;
   align-items: center;
   justify-content: center;
-  -webkit-animation: right-slide .5s ease-in;
-  animation: right-slide .5s ease-in;
+  -webkit-animation: right-slide .3s ease-in;
+  animation: right-slide .3s ease-in;
   transform-origin: right;
 }
 

@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
 * {
   margin: 0;
   padding: 0;
@@ -389,7 +391,7 @@ button {
 }
 
 .choice:hover .choice__price {
-  animation: right-slide 0.5s ease-in;
+  animation: right-slide 0.3s ease-in;
 }
 
 .choice:hover .check {
@@ -397,7 +399,7 @@ button {
   width: 74px;
   align-items: center;
   justify-content: center;
-  animation: right-slide 0.5s ease-in;
+  animation: right-slide 0.3s ease-in;
   transform-origin: right;
 }
 
