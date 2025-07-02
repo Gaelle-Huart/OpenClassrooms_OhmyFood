@@ -293,6 +293,7 @@ button {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  transition: all 0.3s ease;
 }
 .select__title {
   text-transform: uppercase;
@@ -324,17 +325,18 @@ button {
   align-items: center;
   cursor: pointer;
   justify-content: space-between;
-  padding: 15px 0px 15px 15px;
   background: white;
   border-radius: 15px;
   border: none;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  visibility: hidden;
 }
 .choice__txt {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  padding-left: 15px;
   overflow: hidden;
 }
 .choice__txt__1 {
@@ -356,17 +358,14 @@ button {
   overflow: hidden;
 }
 .choice__price {
-  flex: 0 0 auto;
-  white-space: nowrap;
   display: flex;
   height: 42px;
   gap: 1px;
-  padding-left: 10px;
+  padding-left: 5px;
   padding-right: 15px;
   transform: translateX(59px);
   transition: all 0.3s ease;
   margin-right: 59px;
-  z-index: 1;
 }
 .choice__price__setting-N {
   display: flex;
@@ -456,4 +455,70 @@ input#dessert3:checked + label .choice__price {
   display: flex;
   align-content: center;
   justify-content: center;
+}
+
+#E1 {
+  animation: 1s linear 0.1s slide-opacity;
+  animation-fill-mode: forwards;
+}
+
+#E2 {
+  animation: 1s linear 0.2s slide-opacity;
+  animation-fill-mode: forwards;
+}
+
+#E3 {
+  animation: 1s linear 0.3s slide-opacity;
+  animation-fill-mode: forwards;
+}
+
+#E4 {
+  animation: 1s linear 0.4s slide-opacity;
+  animation-fill-mode: forwards;
+}
+
+#P1 {
+  animation: 1s linear 0.8s slide-opacity;
+  animation-fill-mode: forwards;
+}
+
+#P2 {
+  animation: 1s linear 0.9s slide-opacity;
+  animation-fill-mode: forwards;
+}
+
+#P3 {
+  animation: 1s linear 1s slide-opacity;
+  animation-fill-mode: forwards;
+}
+
+#D1 {
+  animation: 1s ease 1.5s slide-opacity;
+  animation-fill-mode: forwards;
+}
+
+#D2 {
+  animation: 1s ease 1.6s slide-opacity;
+  animation-fill-mode: forwards;
+}
+
+#D3 {
+  animation: 1s ease 1.7s slide-opacity;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-opacity {
+  from {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+    visibility: visible;
+  }
 }/*# sourceMappingURL=menu.css.map */

@@ -70,6 +70,7 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+  transition: all .3s ease;
   &__title {
     text-transform: uppercase;
     height: 27px;
@@ -103,16 +104,18 @@
   align-items: center;
   cursor: pointer;
   justify-content: space-between;
-  padding: 15px 0px 15px 15px;
+  //padding: 15px 0px 15px 15px;
   background: white;
   @include border-radius(15px);
   border: none;
   @include card-choice-shadow;
   overflow: hidden;
+  visibility: hidden;
   &__txt {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    padding-left: 15px;
     overflow: hidden;
     &__1 {
       font-size: 18px;
@@ -134,17 +137,15 @@
     }
   }
   &__price {
-    flex: 0 0 auto;
-    white-space: nowrap;
     display: flex;
     height: 42px;
     gap: 1px;
-    padding-left: 10px;
+    padding-left: 5px;
     padding-right: 15px;
     transform: translateX(59px);
     transition: all 0.3s ease;
     margin-right: 59px;
-    z-index: 1;
+    //z-index: 1;
     &__setting-N {
       display: flex;
       font-size: 15px;
@@ -254,4 +255,80 @@ input#dessert3:checked + label .choice__price {
   display: flex;
   align-content: center;
   justify-content: center;
+}
+
+// ---------------------------------------------------------- Animation                    ---------------------------------------------------------- \\
+
+// ------------ Entrées ------------ \\
+// #entrees {
+//   animation: 1s linear 0s slide-opacity; <-- animation moins intéressante que choix par choix
+// }
+#E1 {
+  animation: 1s linear .1s slide-opacity;
+  animation-fill-mode: forwards;
+}
+#E2 {
+  animation: 1s linear .2s slide-opacity;
+  animation-fill-mode: forwards;
+}
+#E3 {
+  animation: 1s linear .3s slide-opacity;
+  animation-fill-mode: forwards;
+}
+#E4 {
+  animation: 1s linear .4s slide-opacity;
+  animation-fill-mode: forwards;
+}
+
+// ------------ Plats ------------ \\
+// #plats {
+//   animation: 1s linear .9s slide-opacity; <-- animation moins intéressante que choix par choix
+// }
+#P1 {
+  animation: 1s linear .8s slide-opacity;
+  animation-fill-mode: forwards;
+}
+#P2 {
+  animation: 1s linear .9s slide-opacity;
+  animation-fill-mode: forwards;
+}
+#P3 {
+  animation: 1s linear 1s slide-opacity;
+  animation-fill-mode: forwards;
+}
+
+// ------------ Desserts ------------ \\
+// #desserts {
+//   animation: 1s linear 1.8s slide-opacity; <-- animation moins intéressante que choix par choix
+// }
+#D1 {
+  animation: 1s ease 1.5s slide-opacity;
+  animation-fill-mode: forwards;
+}
+#D2 {
+  animation: 1s ease 1.6s slide-opacity;
+  animation-fill-mode: forwards;
+}
+#D3 {
+  animation: 1s ease 1.7s slide-opacity;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes slide-opacity {
+  from {
+    opacity: 0;
+    transform: translateY(0);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+    visibility: visible;
+  }
 }
