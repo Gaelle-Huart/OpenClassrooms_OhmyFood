@@ -10,9 +10,64 @@
 @import "./utils/variables";
 @import "./utils/mixins";
 
-//----------------------------------------- La page d'accueil du site ---------------------------------------------//
+// ---------------------------------------------- La page d'accueil du site -------------------------------------------------- \\
 
-//------------------------------------ Bandeau de localisation ------------------------------------//
+
+// -------------------------------------------- Loader --------------------------------------------- \\
+
+.loader {
+   position: fixed;
+   top: 0;
+   right: 0;
+   height: 100vh;
+   width: 100vw;
+   display: flex;
+   gap: 10px;
+   align-items: center;
+   justify-content: center;
+   background: $grey;
+   visibility: hidden;
+   animation: 2.5s 1 ease load;
+   z-index: 5;
+}
+
+.loader div {
+    width: 30px;
+    height: 30px;
+    visibility: hidden;
+    background: $light-purple;
+    @include border-radius(50%);
+    box-shadow: 0 -0.2rem $purple inset;
+    animation: 2s 1 ease-in-out bounce;
+}
+
+.loader div:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.loader div:nth-child(2) {
+    animation-delay: .3s;
+}
+
+.loader div:nth-child(3) {
+    animation-delay: .5s;
+}
+
+@keyframes load {
+    0% {opacity: 90%; visibility: visible;}
+    75% {opacity: 90%; visibility: visible;}
+    100% {opacity: 0; visibility: hidden;}
+}
+
+@keyframes bounce {
+    0% {transform: translateY(0); opacity: 90%; visibility: visible;}
+    25% {transform: translateY(1rem); opacity: 90%; visibility: visible;}
+    50% {transform: translateY(0); opacity: 90%; visibility: visible;}
+    75% {transform: translateY(1rem); opacity: 90%; visibility: visible;}
+    100% {transform: translateY(0); opacity: 0; visibility: hidden;}
+}
+
+// ------------------------------------ Bandeau de localisation ------------------------------------ \\
 .location {
     display: flex;
     justify-content: center;
