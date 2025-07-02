@@ -237,7 +237,7 @@ button {
 .img {
   display: flex;
   width: 100%;
-  height: 100%;
+  height: 275px;
   position: relative;
   z-index: 0;
 }
@@ -343,6 +343,7 @@ button {
   font-size: 18px;
   font-weight: 500;
   line-height: 100%;
+  padding-top: 2px;
   text-align: start;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -352,6 +353,7 @@ button {
   font-size: 15px;
   font-weight: 300;
   line-height: 100%;
+  padding-bottom: 2px;
   text-align: start;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -361,11 +363,9 @@ button {
   display: flex;
   height: 42px;
   gap: 1px;
-  padding-left: 5px;
+  padding-left: 10px;
   padding-right: 15px;
-  transform: translateX(59px);
   transition: all 0.3s ease;
-  margin-right: 59px;
 }
 .choice__price__setting-N {
   display: flex;
@@ -399,7 +399,8 @@ button {
 
 input#entree1,
 input#entree2,
-input#entree3 {
+input#entree3,
+input#entree4 {
   display: none;
 }
 
@@ -417,14 +418,23 @@ input#dessert3 {
 
 input#entree1:checked + label .check,
 input#entree2:checked + label .check,
-input#entree3:checked + label .check {
+input#entree3:checked + label .check,
+input#entree4:checked + label .check {
   transform: translateX(0);
 }
 
 input#entree1:checked + label .choice__price,
 input#entree2:checked + label .choice__price,
-input#entree3:checked + label .choice__price {
-  transform: translateX(0);
+input#entree3:checked + label .choice__price,
+input#entree4:checked + label .choice__price {
+  transform: translateX(-59px);
+}
+
+input#entree1:checked + label .choice__txt,
+input#entree2:checked + label .choice__txt,
+input#entree3:checked + label .choice__txt,
+input#entree4:checked + label .choice__txt {
+  max-width: calc(100% - 111px);
 }
 
 input#plat1:checked + label .check,
@@ -436,7 +446,13 @@ input#plat3:checked + label .check {
 input#plat1:checked + label .choice__price,
 input#plat2:checked + label .choice__price,
 input#plat3:checked + label .choice__price {
-  transform: translateX(0);
+  transform: translateX(-59px);
+}
+
+input#plat1:checked + label .choice__txt,
+input#plat2:checked + label .choice__txt,
+input#plat3:checked + label .choice__txt {
+  max-width: calc(100% - 111px);
 }
 
 input#dessert1:checked + label .check,
@@ -448,7 +464,13 @@ input#dessert3:checked + label .check {
 input#dessert1:checked + label .choice__price,
 input#dessert2:checked + label .choice__price,
 input#dessert3:checked + label .choice__price {
-  transform: translateX(0px);
+  transform: translateX(-59px);
+}
+
+input#dessert1:checked + label .choice__txt,
+input#dessert2:checked + label .choice__txt,
+input#dessert3:checked + label .choice__txt {
+  max-width: calc(100% - 111px);
 }
 
 .purchase {
@@ -458,52 +480,52 @@ input#dessert3:checked + label .choice__price {
 }
 
 #E1 {
-  animation: 1s linear 0.1s slide-opacity;
+  animation: 0.5s linear 0.1s slide-opacity;
   animation-fill-mode: forwards;
 }
 
 #E2 {
-  animation: 1s linear 0.2s slide-opacity;
+  animation: 0.5s linear 0.2s slide-opacity;
   animation-fill-mode: forwards;
 }
 
 #E3 {
-  animation: 1s linear 0.3s slide-opacity;
+  animation: 0.5s linear 0.3s slide-opacity;
   animation-fill-mode: forwards;
 }
 
 #E4 {
-  animation: 1s linear 0.4s slide-opacity;
+  animation: 0.5s linear 0.4s slide-opacity;
   animation-fill-mode: forwards;
 }
 
 #P1 {
-  animation: 1s linear 0.8s slide-opacity;
+  animation: 0.5s linear 0.8s slide-opacity;
   animation-fill-mode: forwards;
 }
 
 #P2 {
-  animation: 1s linear 0.9s slide-opacity;
+  animation: 0.5s linear 0.9s slide-opacity;
   animation-fill-mode: forwards;
 }
 
 #P3 {
-  animation: 1s linear 1s slide-opacity;
+  animation: 0.5s linear 1s slide-opacity;
   animation-fill-mode: forwards;
 }
 
 #D1 {
-  animation: 1s ease 1.5s slide-opacity;
+  animation: 0.5s ease 1.5s slide-opacity;
   animation-fill-mode: forwards;
 }
 
 #D2 {
-  animation: 1s ease 1.6s slide-opacity;
+  animation: 0.5s ease 1.6s slide-opacity;
   animation-fill-mode: forwards;
 }
 
 #D3 {
-  animation: 1s ease 1.7s slide-opacity;
+  animation: 0.5s ease 1.7s slide-opacity;
   animation-fill-mode: forwards;
 }
 

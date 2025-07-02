@@ -3,152 +3,240 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu - À la française</title>
+    <title>À la française</title>
+    <!----------------------- Fonts ----------------------->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap" rel="stylesheet">
+    <!----------------------- Font Awesome ----------------------->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!----------------------- CSS ----------------------->
+    <link rel="stylesheet" href="../sass/menu.css" type="text/css">
 </head>
+
 <body>
-    <header>
-        <a href="../index.html"><i class="fa-solid fa-arrow-left"></i></a>
-        <img src="../assets/images/logo/ohmyfood@2x.svg" alt="logo de OhmyFood">
+    <!--------------------------------------------------------- Header ---------------------------------------------------------->
+    <header class="hdr-menu">
+        <div class="ohmy-menu">
+            <a class="ohmy-menu__arrow" href="../index.html"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i></a>
+            <img class="ohmy-menu__logo" src="../assets/images/logo/ohmyfood.png" alt="logo de OhmyFood">
+        </div>
     </header>
+
     <main class="container">
+        <!------------------------------------------------------- Image -------------------------------------------------------->
         <section class="img">
-            <img src="../assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="un plat de restaurant">
+            <img class="img__setting" src="../assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="un plat de restaurant">
         </section>
+
+        <!------------------------------------------------------- Menu -------------------------------------------------------->
         <section class="menu">
-            <div class="menulike">
-                <h1 class="menutitle">À la française</h1>
-                <div class="cardicon">
-                    <i class="fa-thin fa-heart"></i>
+            <div class="menu-like">
+                <h1 class="menu-like__title">À la française</h1>
+                <div class="menu-like__icon">
+                    <input class="menu-like__icon_input5" type="checkbox" id="color-trigger5"> <!-- détecte le clic -->
+                    <label for="color-trigger5"> <!-- associe le clic à l'input, for= permet de colorer l'icône -->
+                        <svg class="menu-like__icon_svg" viewBox="0 0 24 23" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C22.0187 4.12419 22.1558 8.32368 19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"/>
+                            <defs> <!-- spécifie le dégradé à l'intérieur du coeur -->
+                                <linearGradient id="heart-color5" x1="0%" x2="0%" y1="0%" y2="100%">
+                                    <stop offset="0%" stop-color="#9356DC" />
+                                    <stop offset="100%" stop-color="#FF79DA" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </label>
                 </div>
             </div>
+
+            <!----------------------------------------------------- Entrées ------------------------------------------------------>
             <div class="select">
-                <div class="selectitle">
-                    <h2 class="mealtime">Entrées</h2>
-                    <hr class="line">
-                </div>
-                <div class="choose">
-                    <button class="choice">
-                        <div class="choicetxt">
-                            <h3>Tartare de poulpe acidulé</h3>
-                            <p>Aux zestes d'orange</p>
+                <h2 class="select__title">Entrées</h2>
+                <div class="select__items">
+                    <input type="checkbox" name="entree1" id="entree1" value="Ravioles">
+                    <label class="choice" for="entree1" id="E1">
+                        <div class="choice__txt"> <!---------- one ---------->
+                            <h3 class="choice__txt__1">Ravioles de foie gras</h3>
+                            <p class="choice__txt__2">Accompagnées de leur crème à la truffe</p>
                         </div>
-                        <div class="endchoice">
-                            <div class="price">25€</div>
-                            <div class="check"><i class="fa-sharp fa-solid fa-circle-check"></i></div>
+                        <div class="choice__price">
+                            <div class="choice__price__setting-N">25</div>
+                            <div class="choice__price__setting-E">€</div>
                         </div>
-                    </button>
-                    <button class="choice">
-                        <div class="choicetxt">
-                            <h3>Velouté de légumes d'antant</h3>
-                            <p>Carotte, panais, topinambour</p>
+                        <div class="check">
+                            <i class="check__setting fa-sharp fa-solid fa-circle-check" aria-hidden="true"></i>
                         </div>
-                        <div class="endchoice">
-                            <div class="price">35€</div>
-                            <div class="check"><i class="fa-sharp fa-solid fa-circle-check"></i></div>
+                    </label>
+                    <input type="checkbox" name="entree2" id="entree2" value="Caviar osciètre">
+                    <label class="choice" for="entree2" id="E2">
+                        <div class="choice__txt"> <!---------- two ---------->
+                            <h3 class="choice__txt__1">Caviar osciètre</h3>
+                            <p class="choice__txt__2">Sur blini à la farine de blé noir</p>
                         </div>
-                    </button>
-                    <button class="choice">
-                        <div class="choicetxt">
-                            <h3>Soupe à l'oignon</h3>
-                            <p>Revisitée</p>
+                        <div class="choice__price">
+                            <div class="choice__price__setting-N">35</div>
+                            <div class="choice__price__setting-E">€</div>
                         </div>
-                        <div class="endchoice">
-                            <div class="price">20€</div>
-                            <div class="check"><i class="fa-sharp fa-solid fa-circle-check"></i></div>
+                        <div class="check">
+                            <i class="check__setting fa-sharp fa-solid fa-circle-check" aria-hidden="true"></i>
                         </div>
-                    </button>
+                    </label>
+                    <input type="checkbox" id="entree3" name="entree3" value="Oeuf au plat">
+                    <label class="choice" for="entree3" id="E3">
+                        <div class="choice__txt"> <!---------- three ---------->
+                            <h3 class="choice__txt__1">Homard et espuma de potiron</h3>
+                            <p class="choice__txt__2">Marinés aux zestes d'orange</p>
+                        </div>
+                        <div class="choice__price">
+                            <div class="choice__price__setting-N">20</div>
+                            <div class="choice__price__setting-E">€</div>
+                        </div>
+                        <div class="check">
+                            <i class="check__setting fa-sharp fa-solid fa-circle-check" aria-hidden="true"></i>
+                        </div>
+                    </label>
+                    <input type="checkbox" id="entree4" name="entree4" value="Foie gras de canard">
+                    <label class="choice" for="entree4" id="E3">
+                        <div class="choice__txt"> <!---------- four ---------->
+                            <h3 class="choice__txt__1">Foie gras de canard cuit entier</h3>
+                            <p class="choice__txt__2">Confiture de figue et pain toasté</p>
+                        </div>
+                        <div class="choice__price">
+                            <div class="choice__price__setting-N">35</div>
+                            <div class="choice__price__setting-E">€</div>
+                        </div>
+                        <div class="check">
+                            <i class="check__setting fa-sharp fa-solid fa-circle-check" aria-hidden="true"></i>
+                        </div>
+                    </label>
                 </div>
             </div>
+
+            <!----------------------------------------------------- Plats ------------------------------------------------------>
             <div class="select">
-                <div class="selectitle">
-                    <h2 class="mealtime">Plats</h2>
-                    <hr class="line">
-                </div>
-                <div class="choose">
-                    <button class="choice">
-                        <div class="choicetxt">
-                            <h3>Coquilles Saint-Jacques</h3>
-                            <p>Accompagnées d'une purée de panais</p>
+                <h2 class="select__title">Plats</h2>
+                <div class="select__items">
+                    <input type="checkbox" name="plat1" id="plat1" value="Noix de Saint-Jacques">
+                    <label class="choice" for="plat1" id="P1">
+                        <div class="choice__txt"> <!---------- one ---------->
+                            <h3 class="choice__txt__1">Noix de coquilles Saint-Jacques</h3>
+                            <p class="choice__txt__2">Sur lit de purée de céleri-rave</p>
                         </div>
-                        <div class="endchoice">
-                            <div class="price">40€</div>
-                            <div class="check"><i class="fa-sharp fa-solid fa-circle-check"></i></div>
+                        <div class="choice__price">
+                            <div class="choice__price__setting-N">40</div>
+                            <div class="choice__price__setting-E">€</div>
                         </div>
-                    </button>
-                    <button class="choice">
-                        <div class="choicetxt">
-                            <h3>Magret de canard</h3>
-                            <p>Et parmentier de pommes de terre</p>
+                        <div class="check">
+                            <i class="check__setting fa-sharp fa-solid fa-circle-check" aria-hidden="true"></i>
                         </div>
-                        <div class="endchoice">
-                            <div class="price">35€</div>
-                            <div class="check"><i class="fa-sharp fa-solid fa-circle-check"></i></div>
+                    </label>
+                    <input type="checkbox" name="plat2" id="plat2" value="Langoustine poêlée">
+                    <label class="choice" for="plat2" id="P2">
+                        <div class="choice__txt"> <!---------- two ---------->
+                            <h3 class="choice__txt__1">Langoustine poêlée</h3>
+                            <p class="choice__txt__2">Purée de patate douce</p>
                         </div>
-                    </button>
-                    <button class="choice">
-                        <div class="choicetxt">
-                            <h3>Pigeonneau d’Ille-et-Vilaine</h3>
-                            <p>Sur son lit de gnocchis aux légumes</p>
+                        <div class="choice__price">
+                            <div class="choice__price__setting-N">35</div>
+                            <div class="choice__price__setting-E">€</div>
                         </div>
-                        <div class="endchoice">
-                            <div class="price">44€</div>
-                            <div class="check"><i class="fa-sharp fa-solid fa-circle-check"></i></div>
+                        <div class="check">
+                            <i class="check__setting fa-sharp fa-solid fa-circle-check" aria-hidden="true"></i>
                         </div>
-                    </button>
+                    </label>
+                    <input type="checkbox" id="plat3" name="plat3" value="Mijoté">
+                    <label class="choice" for="plat3" id="P3">
+                        <div class="choice__txt"> <!---------- three ---------->
+                            <h3 class="choice__txt__1">Mijoté de queue de bœuf</h3>
+                            <p class="choice__txt__2">Et riz sauvage aux zestes de citron</p>
+                        </div>
+                        <div class="choice__price">
+                            <div class="choice__price__setting-N">44</div>
+                            <div class="choice__price__setting-E">€</div>
+                        </div>
+                        <div class="check">
+                            <i class="check__setting fa-sharp fa-solid fa-circle-check" aria-hidden="true"></i>
+                        </div>
+                    </label>
                 </div>
             </div>
+
+            <!----------------------------------------------------- Desserts ------------------------------------------------------>
             <div class="select">
-                <div class="selectitle">
-                    <h2 class="mealtime">Desserts</h2>
-                    <hr class="line">
+                <h2 class="select__title">Desserts</h2>
+                <div class="select__items">
+                    <input type="checkbox" name="dessert1" id="dessert1" value="Macaron">
+                    <label class="choice" for="dessert1" id="D1">
+                        <div class="choice__txt"> <!---------- one ---------->
+                            <h3 class="choice__txt__1">Macaron noisette et chocolat</h3>
+                            <p class="choice__txt__2">Glace au caramel brun et sel de Guérande</p>
+                        </div>
+                        <div class="choice__price">
+                            <div class="choice__price__setting-N">18</div>
+                            <div class="choice__price__setting-E">€</div>
+                        </div>
+                        <div class="check">
+                            <i class="check__setting fa-sharp fa-solid fa-circle-check" aria-hidden="true"></i>
+                        </div>
+                    </label>
+                    <input type="checkbox" name="dessert2" id="dessert2" value="Baba">
+                    <label class="choice" for="dessert2" id="D2">
+                        <div class="choice__txt"> <!---------- two ---------->
+                            <h3 class="choice__txt__1">Baba au rhum revisité</h3>
+                            <p class="choice__txt__2">Avec son coulis de citron</p>
+                        </div>
+                        <div class="choice__price">
+                            <div class="choice__price__setting-N">22</div>
+                            <div class="choice__price__setting-E">€</div>
+                        </div>
+                        <div class="check">
+                            <i class="check__setting fa-sharp fa-solid fa-circle-check" aria-hidden="true"></i>
+                        </div>
+                    </label>
+                    <input type="checkbox" id="dessert3" name="dessert3" value="Tarte">
+                    <label class="choice" for="dessert3" id="D3">
+                        <div class="choice__txt"> <!---------- three ---------->
+                            <h3 class="choice__txt__1">Tarte au citron meringuée</h3>
+                            <p class="choice__txt__2">Déstructurée</p>
+                        </div>
+                        <div class="choice__price">
+                            <div class="choice__price__setting-N">23</div>
+                            <div class="choice__price__setting-E">€</div>
+                        </div>
+                        <div class="check">
+                            <i class="check__setting fa-sharp fa-solid fa-circle-check" aria-hidden="true"></i>
+                        </div>
+                    </label>
                 </div>
-                <div class="choose">
-                    <button class="choice">
-                        <div class="choicetxt">
-                            <h3>Pétales de violettes glacés</h3>
-                            <p>Et purée de noisettes</p>
-                        </div>
-                        <div class="endchoice">
-                            <div class="price">18€</div>
-                            <div class="check"><i class="fa-sharp fa-solid fa-circle-check"></i></div>
-                        </div>
-                    </button>
-                    <button class="choice">
-                        <div class="choicetxt">
-                            <h3>Fondant au chocolat</h3>
-                            <p>Revisité</p>
-                        </div>
-                        <div class="endchoice">
-                            <div class="price">22€</div>
-                            <div class="check"><i class="fa-sharp fa-solid fa-circle-check"></i></div>
-                        </div>
-                    </button>
-                    <button class="choice">
-                        <div class="choicetxt">
-                            <h3>Millefeuille croustillant</h3>
-                            <p>Myrtilles et pâte d’amande</p>
-                        </div>
-                        <div class="endchoice">
-                            <div class="price">23€</div>
-                            <div class="check"><i class="fa-sharp fa-solid fa-circle-check"></i></div>
-                        </div>
-                    </button>
-                </div>
+            </div>
+
+            <div class="purchase">
+                <button class="purchase__btn" type="button" name="commander">
+                    Commander
+                </button>
             </div>
         </section>
     </main>
-    <footer>
-        <h2 class="footlogo">omyfood</h2>
-        <ul>
-            <li><i class="fa-solid fa-utensils"></i><a href="#">Proposer un restaurant</a></li>
-            <li><i class="fa-solid fa-handshake-angle"></i><a href="#">Devenir partenaire</a></li>
-            <li><a href="#">Mentions légales</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </footer>
+
+    <!--------------------------------------------------------- Footer ---------------------------------------------------------->
+    <footer class="foot">
+        <h2 class="foot__logo">ohmyfood</h2>
+        <nav class="footnav">
+            <div class="footnav__link">
+                <i class="fa-solid fa-utensils footnav__link_icon1" aria-hidden="true"></i>
+                <a class="footnav__link_txt1" href="#">Proposer un restaurant</a>
+            </div>
+            <div class="footnav__link">
+                <i class="fa-solid fa-handshake-angle footnav__link_icon2" aria-hidden="true"></i>
+                <a class="footnav__link_txt" href="#">Devenir partenaire</a>
+            </div>
+            <div class="footnav__link">
+                <a class="footnav__link_txt" href="#">Mentions légales</a>
+            </div>
+            <div class="footnav__link">
+                <a class="footnav__link_txt" href="mailto:contact@ohmyfood.com">Contact</a>
+            </div>
+        </nav>
+    </footer>    
 </body>
 </html>
