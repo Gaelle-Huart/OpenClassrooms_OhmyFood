@@ -40,7 +40,13 @@
       font-size: 16px;
       padding-left: 4px;
     }
-    &_txt {
+    &_txt2 {
+      font-size: 16px;
+    }
+    &_txt3 {
+      font-size: 16px;
+    }
+    &_txt4 {
       font-size: 16px;
     }
   }
@@ -72,12 +78,15 @@
 // ------------------------------------------------------------- desktop --------------------------------------------------------------- \\
 @media screen and (min-width: 1025px) {
   .foot {
+    height: 114px;
+    flex-direction: row-reverse;
+    align-items: last baseline;
     gap: 100px;
     padding-right: 70px;
   }
   
-
   .footnav {
+    flex-direction: row;
     &__link {
       &_txt2 {
         font-size: 16px;

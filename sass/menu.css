@@ -213,7 +213,13 @@ button {
   font-size: 16px;
   padding-left: 4px;
 }
-.footnav__link_txt {
+.footnav__link_txt2 {
+  font-size: 16px;
+}
+.footnav__link_txt3 {
+  font-size: 16px;
+}
+.footnav__link_txt4 {
   font-size: 16px;
 }
 
@@ -236,8 +242,14 @@ button {
 }
 @media screen and (min-width: 1025px) {
   .foot {
+    height: 114px;
+    flex-direction: row-reverse;
+    align-items: last baseline;
     gap: 100px;
     padding-right: 70px;
+  }
+  .footnav {
+    flex-direction: row;
   }
   .footnav__link_txt2 {
     font-size: 16px;
@@ -261,18 +273,22 @@ button {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  align-content: center;
+  flex-wrap: wrap;
   border-radius: 55px 55px 0px 0px;
   background-color: #F3F3F3;
-  margin-top: -50px;
+  margin-top: -55px;
   padding: 32px 13px 32px 13px;
   position: relative;
   z-index: 1;
 }
 
 .menu-like {
+  width: 347px;
   display: flex;
   position: relative;
   align-items: center;
+  align-self: center;
   justify-content: space-between;
 }
 .menu-like__title {
@@ -322,8 +338,10 @@ button {
   top: 27px;
 }
 .select__items {
+  max-width: 634px;
   display: flex;
   flex-direction: column;
+  justify-items: center;
   gap: 12px;
 }
 
@@ -552,5 +570,27 @@ input#dessert3:checked + label .choice__txt {
     opacity: 1;
     transform: translateY(0px);
     visibility: visible;
+  }
+}
+@media screen and (min-width: 768px) {
+  .img {
+    height: 300px;
+  }
+  .img__setting {
+    -o-object-position: 50% 60%;
+       object-position: 50% 60%;
+  }
+  .select {
+    width: 634px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .img {
+    height: 383px;
+  }
+  .menu {
+    max-width: 1055px;
+    margin: 0 auto;
+    margin-top: -55px;
   }
 }/*# sourceMappingURL=menu.css.map */

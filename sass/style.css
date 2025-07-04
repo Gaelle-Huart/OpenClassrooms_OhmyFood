@@ -213,7 +213,13 @@ button {
   font-size: 16px;
   padding-left: 4px;
 }
-.footnav__link_txt {
+.footnav__link_txt2 {
+  font-size: 16px;
+}
+.footnav__link_txt3 {
+  font-size: 16px;
+}
+.footnav__link_txt4 {
   font-size: 16px;
 }
 
@@ -236,8 +242,14 @@ button {
 }
 @media screen and (min-width: 1025px) {
   .foot {
+    height: 114px;
+    flex-direction: row-reverse;
+    align-items: last baseline;
     gap: 100px;
     padding-right: 70px;
+  }
+  .footnav {
+    flex-direction: row;
   }
   .footnav__link_txt2 {
     font-size: 16px;

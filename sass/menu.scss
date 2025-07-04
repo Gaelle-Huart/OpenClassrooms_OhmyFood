@@ -26,18 +26,22 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
+  align-content: center;
+  flex-wrap: wrap;
   border-radius: 55px 55px 0px 0px;
   background-color: $bg-color;
-  margin-top: -50px;
+  margin-top: -55px;
   padding: 32px 13px 32px 13px;
   position: relative;
   z-index: 1;
 }
 
 .menu-like {
+  width: 347px;
   display: flex;
   position: relative;
   align-items: center;
+  align-self: center;
   justify-content: space-between;
   &__title {
     font-family: "Shrikhand", cursive;
@@ -88,8 +92,10 @@
     }
   }
   &__items {
+    max-width: 634px;
     display: flex;
     flex-direction: column;
+    justify-items: center;
     gap: 12px;
   }
 }
@@ -167,7 +173,7 @@
   justify-content: center;
   width: 59px;
   height: 72px;
-  //display: none; empêche l'animation de fonctionner correctement au retour, trouver une autre solution
+  //display: none; empêche l'animation keyframes de fonctionner correctement au retour, trouver une autre solution
   background: $green;
   @include border-radius(0px 15px 15px 0px);
   right: 0;
@@ -320,7 +326,7 @@ input#dessert3:checked + label .choice__txt {
 
 // ------------ desserts ------------ \\
 // #desserts {
-//   animation: 1s linear 1.8s slide-opacity; <-- animation moins intéressante que choix par choix
+//   animation: 1s linear 1.8s slide-opacity; <-- animation moins intéressante que celle choix par choix
 // }
 #D1 {
   animation: .5s ease 1.5s slide-opacity;
@@ -335,23 +341,35 @@ input#dessert3:checked + label .choice__txt {
   animation-fill-mode: forwards;
 }
 
-
 @keyframes slide-opacity {
-  from {
-    opacity: 0;
-    transform: translateY(0);
-  }
+  from {opacity: 0; transform: translateY(0);}
+  50% {opacity: 0.5; transform: translateY(10px);}
+  to {opacity: 1; transform: translateY(0px); visibility: visible;}
+}
 
-  50% {
-    opacity: 0.5;
-    transform: translateY(10px);
-  }
+// --------------------------------------------------------- Media Queries ----------------------------------------------------------- \\
 
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-    visibility: visible;
+// ------------------------------------------------------------ tablet ----------------------------------------------------------- \\
+@media screen and (min-width: 768px) {
+  .img {
+    height: 300px;
+    &__setting {
+      object-position: 50% 60%; // <-- repositionne l'image dans son parent, très pratique
+    }
+  }
+  .select {
+    width: 634px;
   }
 }
 
-// ------------------------------------------------------ Media Queries -------------------------------------------------------- \\
+// ------------------------------------------------------------ desktop ----------------------------------------------------------- \\
+@media screen and (min-width: 1025px) {
+  .img {
+    height: 383px;
+  }
+  .menu {
+    max-width: 1055px;
+    margin: 0 auto;
+    margin-top: -55px;
+  }
+}
