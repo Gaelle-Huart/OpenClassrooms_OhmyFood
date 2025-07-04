@@ -493,6 +493,7 @@ button {
 }
 
 .card {
+  width: 340px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -545,12 +546,10 @@ button {
 }
 .card__info_txt {
   height: 70px;
-  display: flex;
+  width: 250px;
+  display: block;
   color: black;
-  flex-direction: column;
-  justify-content: center;
-  gap: 3px;
-  padding-top: 5px;
+  padding-top: 15px;
 }
 .card__info_txt_title {
   font-size: 18px;
@@ -559,9 +558,10 @@ button {
 .card__info_txt_location {
   font-size: 17px;
   font-weight: 300;
+  padding-top: 5px;
 }
 .card__info_icon {
-  display: inline-block;
+  display: block;
 }
 .card__info_icon-svg {
   width: 25px;
