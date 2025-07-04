@@ -41,3 +41,18 @@
         left: 17px;
     }
 }
+
+// ------------------------------------------------------------- desktop --------------------------------------------------------------- \\
+@media screen and (min-width: 1025px) {
+    .hdr {
+        height: 146px;
+    }
+    .ohmy {
+        height: 96px;
+        &__logo {
+            height: 34px;
+            padding-top: 2px;
+            align-self: center;
+        }
+    }
+}

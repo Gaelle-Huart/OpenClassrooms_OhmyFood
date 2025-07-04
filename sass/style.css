@@ -75,6 +75,16 @@ button {
   text-indent: -1%;
 }
 
+@media screen and (min-width: 768px) {
+  .about__btn {
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .about__btn {
+    margin-top: 0;
+  }
+}
 .hdr {
   display: flex;
   flex-direction: column;
@@ -117,6 +127,19 @@ button {
   left: 17px;
 }
 
+@media screen and (min-width: 1025px) {
+  .hdr {
+    height: 146px;
+  }
+  .ohmy {
+    height: 96px;
+  }
+  .ohmy__logo {
+    height: 34px;
+    padding-top: 2px;
+    align-self: center;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -151,47 +174,6 @@ button {
   font-family: "Roboto", sans-serif;
 }
 
-.about__btn {
-  width: 218px;
-  height: 50px;
-  color: white;
-  font-size: 16px;
-  border-radius: 25px;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-  background: linear-gradient(355deg, #9356DC -11%, #FF79DA 124%);
-  border: none;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 50px;
-  margin-top: 27px;
-  transition: all 0.3s ease-in-out;
-}
-.about__btn:hover, .about__btn:focus {
-  background: linear-gradient(355deg, #9b63df -11%, #ff88de 124%);
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
-  text-indent: -1%;
-}
-
-.purchase__btn {
-  width: 186px;
-  height: 50px;
-  color: white;
-  font-size: 16px;
-  border-radius: 25px;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-  background: linear-gradient(355deg, #9356DC -11%, #FF79DA 124%);
-  border: none;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 50px;
-  transition: all 0.3s ease-in-out;
-}
-.purchase__btn:hover, .purchase__btn:focus {
-  background: linear-gradient(355deg, #9b63df -11%, #ff88de 124%);
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
-  text-indent: -1%;
-}
-
 .foot {
   display: flex;
   flex-direction: column;
@@ -213,6 +195,7 @@ button {
 }
 .footnav__link {
   display: flex;
+  flex-direction: row;
   align-items: center;
   margin: 0;
   gap: 8px;
@@ -234,6 +217,33 @@ button {
   font-size: 16px;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .foot {
+    height: 114px;
+    flex-direction: row-reverse;
+    align-items: last baseline;
+    gap: 30px;
+  }
+  .footnav {
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+  }
+  .footnav__link_txt2 {
+    font-size: 16px;
+    padding-right: 25px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .foot {
+    gap: 100px;
+    padding-right: 70px;
+  }
+  .footnav__link_txt2 {
+    font-size: 16px;
+    padding-right: 40px;
+  }
+}
 .loader {
   position: fixed;
   top: 0;
@@ -244,7 +254,7 @@ button {
   gap: 10px;
   align-items: center;
   justify-content: center;
-  background: #EAEAEA;
+  background: #F3F3F3;
   visibility: hidden;
   animation: 2.5s 1 ease load;
   z-index: 5;
@@ -256,7 +266,7 @@ button {
   visibility: hidden;
   background: #FF79DA;
   border-radius: 50%;
-  box-shadow: 0 -0.2rem #9356DC inset;
+  box-shadow: 0 -0.2rem 4px 2px #9356DC inset;
   animation: 2s 1 ease-in-out bounce;
 }
 
@@ -346,6 +356,12 @@ button {
   font-weight: 500;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
 .about {
   display: flex;
   flex-direction: column;
@@ -373,8 +389,9 @@ button {
   display: flex;
   gap: 25px;
   flex-direction: column;
-  justify-content: center;
-  padding: 47px 20px 67px 20px;
+  align-content: center;
+  flex-wrap: wrap;
+  padding: 47px 0px 67px 0px;
 }
 .fonction__title {
   font-size: 24px;
@@ -383,14 +400,17 @@ button {
 }
 
 .instructions {
+  width: 335px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 25px;
 }
 .instructions__step {
   display: flex;
   height: 72.38px;
   width: 335px;
+  position: relative;
 }
 .instructions__step_number {
   display: flex;
@@ -400,8 +420,7 @@ button {
   color: white;
   align-items: center;
   justify-content: center;
-  position: relative;
-  top: 25px;
+  align-self: center;
   background-color: #9356DC;
   border-radius: 25px;
 }
@@ -409,10 +428,9 @@ button {
   display: flex;
   gap: 20px;
   align-items: center;
-  justify-items: flex-start;
   position: absolute;
-  left: 32.5px;
-  width: 322px;
+  left: 12px;
+  width: 322.5px;
   height: 72px;
   font-size: 16px;
   font-weight: 500;
@@ -437,20 +455,22 @@ button {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
   padding-top: 55px;
   padding-bottom: 65px;
   background-color: #F3F3F3;
 }
 .restaurants__title {
+  width: 340px;
   font-size: 24px;
-  padding-left: 20px;
   font-weight: 700;
 }
 .restaurants__cards {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 18px;
-  padding: 0px 17px;
 }
 
 .link {
@@ -465,11 +485,12 @@ button {
   flex-direction: column;
   overflow: hidden;
   width: inherit;
+  position: relative;
   height: 251px;
   background-color: white;
   border-radius: 15px;
 }
-.card__new1 {
+.card__new {
   width: 80px;
   height: 29px;
   font-size: 14px;
@@ -478,25 +499,8 @@ button {
   align-items: center;
   justify-content: center;
   position: absolute;
-  bottom: -75px;
-  left: 265px;
-  background-color: #99E2D0;
-  color: #008766;
-  border-radius: 2px;
-  z-index: 1;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-}
-.card__new2 {
-  width: 80px;
-  height: 29px;
-  font-size: 14px;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  bottom: -344px;
-  left: 265px;
+  top: 13px;
+  left: 248px;
   background-color: #99E2D0;
   color: #008766;
   border-radius: 2px;
@@ -581,4 +585,132 @@ button {
 .card__info_icon-input4[type=checkbox]:checked + label svg {
   fill: url(#heart-color4);
   stroke: url(#heart-color4);
+}
+
+@media screen and (min-width: 768px) {
+  .about {
+    height: 250px;
+  }
+  .about__title {
+    width: auto;
+    font-size: 28px;
+  }
+  .about__subtitle {
+    width: auto;
+  }
+  .fonction {
+    padding: 47px 0px 67px 0px;
+    align-items: center;
+  }
+  .fonction__title {
+    width: 335px;
+    padding-left: 0;
+  }
+  .instructions {
+    width: 335px;
+    align-items: center;
+  }
+  .instructions__step {
+    width: 335px;
+  }
+  .instructions__step_info {
+    width: 322.5px;
+  }
+  .restaurants__title {
+    width: 712px;
+    display: flex;
+    padding: 0;
+  }
+  .restaurants__cards {
+    width: 712px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .about {
+    height: 250px;
+  }
+  .fonction {
+    padding: 50px 0;
+  }
+  .fonction__title {
+    width: 1000px;
+  }
+  .instructions {
+    width: 1000px;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: center;
+  }
+  .instructions__step {
+    width: 335px;
+  }
+  .instructions__step_info {
+    width: 308px;
+  }
+}
+@media screen and (min-width: 1281px) {
+  .about {
+    height: 250px;
+    justify-content: space-evenly;
+  }
+  .about__title {
+    width: auto;
+    height: 47px;
+    font-size: 40px;
+  }
+  .about__subtitle {
+    height: 27px;
+    text-align: center;
+  }
+  .fonction {
+    align-items: center;
+    padding: 50px 0;
+  }
+  .fonction__title {
+    width: 1080px;
+    padding: 0;
+  }
+  .instructions {
+    width: 1080px;
+    flex-direction: row;
+    gap: 36px;
+    justify-content: center;
+  }
+  .instructions__step {
+    width: 335px;
+  }
+  .instructions__step_info {
+    width: 322.5px;
+  }
+  .restaurants {
+    padding: 55px 0px 65px 0px;
+    align-items: center;
+  }
+  .restaurants__title {
+    width: 1080px;
+    padding: 0;
+  }
+  .restaurants__cards {
+    width: 1080px;
+    justify-content: space-between;
+    row-gap: 50px;
+  }
+  .restaurants a {
+    width: 490px;
+  }
+  .card {
+    width: 490px;
+  }
+  .card__new {
+    top: 13px;
+    left: 396px;
+  }
+  .card__img {
+    width: inherit;
+    left: 0;
+  }
 }/*# sourceMappingURL=style.css.map */

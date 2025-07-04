@@ -10,10 +10,10 @@
 @import "./utils/variables";
 @import "./utils/mixins";
 
-// ---------------------------------------------- La page d'accueil du site -------------------------------------------------- \\
+// ---------------------------------------------------- La page d'accueil du site -------------------------------------------------------- \\
 
 
-// -------------------------------------------- Loader --------------------------------------------- \\
+// -------------------------------------------------------------- Loader --------------------------------------------------------------- \\
 
 .loader {
    position: fixed;
@@ -25,7 +25,7 @@
    gap: 10px;
    align-items: center;
    justify-content: center;
-   background: $grey;
+   background: $bg-color;
    visibility: hidden;
    animation: 2.5s 1 ease load;
    z-index: 5;
@@ -37,7 +37,7 @@
     visibility: hidden;
     background: $light-purple;
     @include border-radius(50%);
-    box-shadow: 0 -0.2rem $purple inset;
+    box-shadow: 0 -0.2rem 4px 2px $purple inset; // <-- horizontal, vertical, blur, spread, color, inner
     animation: 2s 1 ease-in-out bounce;
 }
 
@@ -67,7 +67,7 @@
     100% {transform: translateY(0); opacity: 0; visibility: hidden;}
 }
 
-// ------------------------------------ Bandeau de localisation ------------------------------------ \\
+// ---------------------------------------------------- Bandeau de localisation ---------------------------------------------------- \\
 .location {
     display: flex;
     justify-content: center;
@@ -97,7 +97,13 @@
     }
 }
 
-//------------------------------------ Bloc de présentation du concept ------------------------------------//
+//---------------------------------------------------- Bloc de présentation du concept ----------------------------------------------------//
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+}
+
 .about {
     display: flex;
     flex-direction: column;
@@ -121,13 +127,14 @@
     }
 }
 
-//------------------------------------ Instructions d'utilisation du site ------------------------------------//
+//-------------------------------------------------- Instructions d'utilisation du site --------------------------------------------------//
 .fonction {
     display: flex;
     gap: 25px;
     flex-direction: column;
-    justify-content: center;
-    padding: 47px 20px 67px 20px;
+    align-content: center;
+    flex-wrap: wrap;
+    padding: 47px 0px 67px 0px;
     &__title {
         font-size: 24px;
         font-weight: 700;
@@ -136,13 +143,16 @@
 }
 
 .instructions {
+    width: 335px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 25px;
     &__step {
         display: flex;
         height: 72.38px;
         width: 335px;
+        position: relative;
         &_number {
             display: flex;
             height: 24px;
@@ -150,8 +160,7 @@
             font-size: 14px;
             color: white;
             @include center;
-            position: relative;
-            top: 25px;
+            align-self: center;
             background-color: $purple;
             @include border-radius(25px);
         }
@@ -159,10 +168,9 @@
             display: flex;
             gap: 20px;
             align-items: center;
-            justify-items: flex-start;
             position: absolute;
-            left: 32.5px;
-            width: 322px;
+            left: 12px;
+            width: 322.5px;
             height: 72px;
             font-size: 16px;
             font-weight: 500;
@@ -185,24 +193,26 @@
     }
 }
 
-//------------------------------------ Partie restaurants de la page ------------------------------------//
+//---------------------------------------------------- Partie restaurants de la page ----------------------------------------------------//
 .restaurants {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
     padding-top: 55px;
     padding-bottom: 65px;
     background-color: $bg-color;
     &__title {
+        width: 340px;
         font-size: 24px;
-        padding-left: 20px;
         font-weight: 700;
     }
     &__cards {
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 18px;
-        padding: 0px 17px;
     }
 }
 
@@ -218,10 +228,11 @@
     flex-direction: column;
     overflow: hidden;
     width: inherit;
+    position: relative;
     height: 251px;
     background-color: white;
     @include border-radius(15px);
-    &__new1 {
+    &__new {
         width: 80px;
         height: 29px;
         font-size: 14px;
@@ -229,24 +240,8 @@
         display: flex;
         @include center;
         position: absolute;
-        bottom: -75px;
-        left: 265px;
-        background-color: $green;
-        color: $green-font;
-        @include border-radius(2px);
-        z-index: 1;
-        @include hdr-shadow;
-    }
-    &__new2 {
-        width: 80px;
-        height: 29px;
-        font-size: 14px;
-        font-weight: 500;
-        display: flex;
-        @include center;
-        position: absolute;
-        bottom: -344px;
-        left: 265px;
+        top: 13px;
+        left: 248px;
         background-color: $green;
         color: $green-font;
         @include border-radius(2px);
@@ -329,5 +324,142 @@
                 }
             }
         }  
+    }
+}
+
+// ----------------------------------------------------------- Media Queries ------------------------------------------------------------ \\
+
+// -------------------------------------------------------------- tablet --------------------------------------------------------------- \\
+@media screen and (min-width: 768px) {
+    .about {
+        height: 250px;
+        &__title {
+            width: auto;
+            font-size: 28px;
+        }
+        &__subtitle {
+            width: auto;
+        }
+    }
+    .fonction {
+        padding: 47px 0px 67px 0px;
+        align-items: center;
+        &__title {
+            width: 335px;
+            padding-left: 0;
+        }
+    }
+    .instructions {
+        width: 335px;
+        align-items: center;
+        &__step {
+            width: 335px;
+            &_info {
+                width: 322.5px;
+            }
+        }
+    }
+    .restaurants {
+        &__title {
+            width: 712px;
+            display: flex;
+            padding: 0;
+        }
+        &__cards {
+            width: 712px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    }
+}
+
+// ------------------------------------------------------------- desktop --------------------------------------------------------------- \\
+@media screen and (min-width: 1025px) {
+    .about {
+        height: 250px;
+    }
+    .fonction {
+        padding: 50px 0;
+        &__title {
+            width: 1000px;
+        }
+    }
+    .instructions {
+        width: 1000px;
+        flex-direction: row;
+        gap: 5px;
+        justify-content: center;
+        &__step {
+            width: 335px;
+            &_info {
+                width: 308px;
+            }
+        }
+    }
+}
+
+// ----------------------------------------------------------- wide desktop ------------------------------------------------------------- \\
+@media screen and (min-width: 1281px) {
+    .about {
+        height: 250px;
+        justify-content: space-evenly;
+        &__title {
+            width: auto;
+            height: 47px;
+            font-size: 40px;
+        }
+        &__subtitle {
+            height: 27px;
+            text-align: center;
+        }
+    }
+    .fonction {
+        align-items: center;
+        padding: 50px 0;
+        &__title {
+            width: 1080px;
+            padding: 0;
+        }
+    }
+    .instructions {
+        width: 1080px;
+        flex-direction: row;
+        gap: 36px;
+        justify-content: center;
+        &__step {
+            width: 335px;
+            &_info {
+                width: 322.5px;
+            }
+        }
+    }
+    .restaurants {
+        padding: 55px 0px 65px 0px;
+        align-items: center;
+        &__title {
+            width: 1080px;
+            padding: 0;
+        }
+        &__cards {
+            width: 1080px;
+            justify-content: space-between;
+            row-gap: 50px;
+        }
+    }
+    .restaurants a {
+        width: 490px;
+    }
+    .card {
+        width: 490px;
+        &__new {
+            top: 13px;
+            left: 396px;
+        }
+        &__img {
+            width: inherit;
+            left: 0;
+        }
     }
 }

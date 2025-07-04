@@ -75,6 +75,16 @@ button {
   text-indent: -1%;
 }
 
+@media screen and (min-width: 768px) {
+  .about__btn {
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .about__btn {
+    margin-top: 0;
+  }
+}
 .hdr {
   display: flex;
   flex-direction: column;
@@ -117,6 +127,19 @@ button {
   left: 17px;
 }
 
+@media screen and (min-width: 1025px) {
+  .hdr {
+    height: 146px;
+  }
+  .ohmy {
+    height: 96px;
+  }
+  .ohmy__logo {
+    height: 34px;
+    padding-top: 2px;
+    align-self: center;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -151,47 +174,6 @@ button {
   font-family: "Roboto", sans-serif;
 }
 
-.about__btn {
-  width: 218px;
-  height: 50px;
-  color: white;
-  font-size: 16px;
-  border-radius: 25px;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-  background: linear-gradient(355deg, #9356DC -11%, #FF79DA 124%);
-  border: none;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 50px;
-  margin-top: 27px;
-  transition: all 0.3s ease-in-out;
-}
-.about__btn:hover, .about__btn:focus {
-  background: linear-gradient(355deg, #9b63df -11%, #ff88de 124%);
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
-  text-indent: -1%;
-}
-
-.purchase__btn {
-  width: 186px;
-  height: 50px;
-  color: white;
-  font-size: 16px;
-  border-radius: 25px;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-  background: linear-gradient(355deg, #9356DC -11%, #FF79DA 124%);
-  border: none;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 50px;
-  transition: all 0.3s ease-in-out;
-}
-.purchase__btn:hover, .purchase__btn:focus {
-  background: linear-gradient(355deg, #9b63df -11%, #ff88de 124%);
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
-  text-indent: -1%;
-}
-
 .foot {
   display: flex;
   flex-direction: column;
@@ -213,6 +195,7 @@ button {
 }
 .footnav__link {
   display: flex;
+  flex-direction: row;
   align-items: center;
   margin: 0;
   gap: 8px;
@@ -234,6 +217,33 @@ button {
   font-size: 16px;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .foot {
+    height: 114px;
+    flex-direction: row-reverse;
+    align-items: last baseline;
+    gap: 30px;
+  }
+  .footnav {
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+  }
+  .footnav__link_txt2 {
+    font-size: 16px;
+    padding-right: 25px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .foot {
+    gap: 100px;
+    padding-right: 70px;
+  }
+  .footnav__link_txt2 {
+    font-size: 16px;
+    padding-right: 40px;
+  }
+}
 .img {
   display: flex;
   width: 100%;
