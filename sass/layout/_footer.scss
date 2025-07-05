@@ -1,9 +1,6 @@
 @import "../base/reset";
 @import "../base/typography";
 
-@import "../components/buttons";
-@import "../components/icons";
-
 @import "../utils/variables";
 
 .foot {
@@ -26,6 +23,7 @@
   gap: 7px;
   &__link {
     display: flex;
+    flex-direction: row;
     align-items: center;
     margin: 0;
     gap: 8px;
@@ -42,8 +40,58 @@
       font-size: 16px;
       padding-left: 4px;
     }
-    &_txt {
+    &_txt2 {
       font-size: 16px;
+    }
+    &_txt3 {
+      font-size: 16px;
+    }
+    &_txt4 {
+      font-size: 16px;
+    }
+  }
+}
+
+// ------------------------------------------------------------- tablet --------------------------------------------------------------- \\
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .foot {
+    height: 114px;
+    flex-direction: row-reverse;
+    align-items: last baseline;
+    gap: 30px;
+  }
+
+
+  .footnav {
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+    &__link {
+      &_txt2 {
+        font-size: 16px;
+        padding-right: 25px;
+      }
+    }
+  }
+}
+
+// ------------------------------------------------------------- desktop --------------------------------------------------------------- \\
+@media screen and (min-width: 1025px) {
+  .foot {
+    height: 114px;
+    flex-direction: row-reverse;
+    align-items: last baseline;
+    gap: 100px;
+    padding-right: 70px;
+  }
+  
+  .footnav {
+    flex-direction: row;
+    &__link {
+      &_txt2 {
+        font-size: 16px;
+        padding-right: 40px;
+      }
     }
   }
 }

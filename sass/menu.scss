@@ -13,7 +13,7 @@
 .img {
   display: flex;
   width: 100%;
-  height: 100%;
+  height: 275px;
   position: relative;
   z-index: 0;
   &__setting {
@@ -26,18 +26,22 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
+  align-content: center;
+  flex-wrap: wrap;
   border-radius: 55px 55px 0px 0px;
   background-color: $bg-color;
-  margin-top: -50px;
+  margin-top: -55px;
   padding: 32px 13px 32px 13px;
   position: relative;
   z-index: 1;
 }
 
 .menu-like {
+  width: 347px;
   display: flex;
   position: relative;
   align-items: center;
+  align-self: center;
   justify-content: space-between;
   &__title {
     font-family: "Shrikhand", cursive;
@@ -64,10 +68,13 @@
   }
 }
 
+// ------------------------------------------------------ entrees, plats, desserts ------------------------------------------------------ \\
+
 .select {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  transition: all .3s ease;
   &__title {
     text-transform: uppercase;
     height: 27px;
@@ -81,50 +88,56 @@
       background: $green;
       left: 0;
       position: absolute;
-      top: 27px;
+      top: 25px;
     }
   }
   &__items {
+    max-width: 634px;
     display: flex;
     flex-direction: column;
+    justify-items: center;
     gap: 12px;
   }
 }
 
+// ---------------------------------------------------------- choices ---------------------------------------------------------- \\
+
 .choice {
+  position: relative;
   display: flex;
   height: 72px;
   width: 100%;
   align-items: center;
   cursor: pointer;
   justify-content: space-between;
-  padding: 15px 0px 15px 15px;
+  //padding: 15px 0px 15px 15px;
   background: white;
   @include border-radius(15px);
   border: none;
   @include card-choice-shadow;
   overflow: hidden;
+  visibility: hidden;
   &__txt {
     display: flex;
-    width: 287px;
     flex-direction: column;
     gap: 5px;
+    padding-left: 15px;
     overflow: hidden;
     &__1 {
-      display: inline-block;
       font-size: 18px;
       font-weight: 500;
       line-height: 100%;
+      padding-top: 2px;
       text-align: start;
       white-space: nowrap;
       text-overflow: ellipsis;
       overflow: hidden;
     }
     &__2 {
-      display: inline-block;
       font-size: 15px;
       font-weight: 300;
       line-height: 100%;
+      padding-bottom: 2px;
       text-align: start;
       white-space: nowrap;
       text-overflow: ellipsis;
@@ -135,9 +148,9 @@
     display: flex;
     height: 42px;
     gap: 1px;
-    padding-left: 5px;
+    padding-left: 10px;
     padding-right: 15px;
-    z-index: 1;
+    transition: all 0.3s ease;
     &__setting-N {
       display: flex;
       font-size: 15px;
@@ -154,43 +167,209 @@
 }
 
 .check {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 59px;
   height: 72px;
-  display: none;
+  //display: none; empêche l'animation keyframes de fonctionner correctement au retour, trouver une autre solution
   background: $green;
   @include border-radius(0px 15px 15px 0px);
-  position: relative;
+  right: 0;
+  transform: translateX(59px); // bien plus simple que keyframes pour ce cas, c'est adopté
+  transition: all 0.3s ease;
   &__setting {
     color: white;
   }
 }
 
-.choice:hover .choice__price {
-  animation: right-slide .3s ease-in;
+// ---------------------------------------------------------- inputs ---------------------------------------------------------- \\
+
+input#entree1, 
+input#entree2, 
+input#entree3,
+input#entree4 {
+  display: none;
 }
 
-.choice:hover .check {
-  display: flex;
-  width: 74px;
-  align-items: center;
-  justify-content: center;
-  -webkit-animation: right-slide .3s ease-in;
-  animation: right-slide .3s ease-in;
-  transform-origin: right;
+input#plat1, 
+input#plat2, 
+input#plat3 {
+  display: none;
 }
 
-@keyframes right-slide {
-  from {
-    transform: translateX(59px);
-  }
-
-  to {
-    transform: translateX(0px);
-  }
+input#dessert1, 
+input#dessert2, 
+input#dessert3 {
+  display: none;
 }
+
+input#entree1:checked + label .check,
+input#entree2:checked + label .check,
+input#entree3:checked + label .check,
+input#entree4:checked + label .check {
+  transform: translateX(0);
+}
+
+input#entree1:checked + label .choice__price,
+input#entree2:checked + label .choice__price,
+input#entree3:checked + label .choice__price,
+input#entree4:checked + label .choice__price {
+  transform: translateX(-59px);
+}
+
+input#entree1:checked + label .choice__txt,
+input#entree2:checked + label .choice__txt,
+input#entree3:checked + label .choice__txt,
+input#entree4:checked + label .choice__txt {
+  max-width: calc(100% - 111px);
+}
+
+input#plat1:checked + label .check,
+input#plat2:checked + label .check,
+input#plat3:checked + label .check {
+  transform: translateX(0);
+}
+
+input#plat1:checked + label .choice__price,
+input#plat2:checked + label .choice__price,
+input#plat3:checked + label .choice__price {
+  transform: translateX(-59px);
+}
+
+input#plat1:checked + label .choice__txt,
+input#plat2:checked + label .choice__txt,
+input#plat3:checked + label .choice__txt {
+  max-width: calc(100% - 111px);
+}
+
+input#dessert1:checked + label .check,
+input#dessert2:checked + label .check,
+input#dessert3:checked + label .check {
+  transform: translateX(0);
+}
+
+input#dessert1:checked + label .choice__price,
+input#dessert2:checked + label .choice__price,
+input#dessert3:checked + label .choice__price {
+  transform: translateX(-59px);
+}
+
+input#dessert1:checked + label .choice__txt,
+input#dessert2:checked + label .choice__txt,
+input#dessert3:checked + label .choice__txt {
+  max-width: calc(100% - 111px);
+}
+
+// ---------------------------------------------------------- purchase ---------------------------------------------------------- \\
+
+//.choice:hover .choice__price {
+//  animation: right-slide .3s ease-in;
+//}
+
+// .choice:hover .check {
+//   display: flex;
+//   width: 74px;
+//   align-items: center;
+//   justify-content: center;
+//   -webkit-animation: right-slide .3s ease-in;
+//   animation: right-slide .3s ease-in;
+//   transform-origin: right;
+// }
 
 .purchase {
   display: flex;
   align-content: center;
   justify-content: center;
+}
+
+// ------------------------------------------------------ choices animation -------------------------------------------------------- \\
+
+// ------------ entrées ------------ \\
+// #entrees {
+//   animation: 1s linear 0s slide-opacity; <-- animation moins intéressante que choix par choix
+// }
+#E1 {
+  animation: .5s linear .1s slide-opacity;
+  animation-fill-mode: forwards;
+}
+#E2 {
+  animation: .5s linear .2s slide-opacity;
+  animation-fill-mode: forwards;
+}
+#E3 {
+  animation: .5s linear .3s slide-opacity;
+  animation-fill-mode: forwards;
+}
+#E4 {
+  animation: .5s linear .4s slide-opacity;
+  animation-fill-mode: forwards;
+}
+
+// ------------ plats ------------ \\
+// #plats {
+//   animation: 1s linear .9s slide-opacity; <-- animation moins intéressante que choix par choix
+// }
+#P1 {
+  animation: .5s linear .8s slide-opacity;
+  animation-fill-mode: forwards;
+}
+#P2 {
+  animation: .5s linear .9s slide-opacity;
+  animation-fill-mode: forwards;
+}
+#P3 {
+  animation: .5s linear 1s slide-opacity;
+  animation-fill-mode: forwards;
+}
+
+// ------------ desserts ------------ \\
+// #desserts {
+//   animation: 1s linear 1.8s slide-opacity; <-- animation moins intéressante que celle choix par choix
+// }
+#D1 {
+  animation: .5s ease 1.5s slide-opacity;
+  animation-fill-mode: forwards;
+}
+#D2 {
+  animation: .5s ease 1.6s slide-opacity;
+  animation-fill-mode: forwards;
+}
+#D3 {
+  animation: .5s ease 1.7s slide-opacity;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-opacity {
+  from {opacity: 0; transform: translateY(0);}
+  50% {opacity: 0.5; transform: translateY(10px);}
+  to {opacity: 1; transform: translateY(0px); visibility: visible;}
+}
+
+// --------------------------------------------------------- Media Queries ----------------------------------------------------------- \\
+
+// ------------------------------------------------------------ tablet ----------------------------------------------------------- \\
+@media screen and (min-width: 768px) {
+  .img {
+    height: 300px;
+    &__setting {
+      object-position: 50% 60%; // <-- repositionne l'image dans son parent, très pratique
+    }
+  }
+  .select {
+    width: 634px;
+  }
+}
+
+// ------------------------------------------------------------ desktop ----------------------------------------------------------- \\
+@media screen and (min-width: 1025px) {
+  .img {
+    height: 383px;
+  }
+  .menu {
+    max-width: 1055px;
+    margin: 0 auto;
+    margin-top: -55px;
+  }
 }
