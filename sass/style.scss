@@ -101,7 +101,7 @@
 .container {
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    max-width: 100%;
 }
 
 .about {
@@ -255,7 +255,6 @@
         object-fit: cover;
         position: relative;
         top: -57px;
-        left: -3px;
         &_setting {
             width: inherit;
             height: inherit;
@@ -436,6 +435,7 @@
         }
     }
     .restaurants {
+        max-width: 100%;
         padding: 55px 0px 65px 0px;
         align-items: center;
         &__title {
@@ -448,9 +448,12 @@
             row-gap: 50px;
         }
     }
-    .restaurants a {
+    div.link {
         width: 490px;
     }
+    // .restaurants a {
+    //     width: 490px;
+    // }
     .card {
         width: 490px;
         &__new {
