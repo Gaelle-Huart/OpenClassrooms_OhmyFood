@@ -545,7 +545,7 @@ button {
 }
 .card__info_txt {
   height: 70px;
-  width: 250px;
+  width: 400px;
   display: block;
   color: black;
   padding-top: 15px;
@@ -565,6 +565,7 @@ button {
 .card__info_icon-svg {
   width: 25px;
   height: 25px;
+  cursor: pointer;
   fill: transparent;
   stroke: #101010;
   transition: fill 0.3s, stroke 0.3s;
@@ -662,6 +663,10 @@ button {
   .instructions__step_info {
     width: 308px;
   }
+  .card__info_icon-svg:hover {
+    fill: url(#heart-color1);
+    stroke: url(#heart-color1);
+  }
 }
 @media screen and (min-width: 1281px) {
   .about {
@@ -724,5 +729,8 @@ button {
   .card__img {
     width: inherit;
     left: 0;
+  }
+  .card__info_txt {
+    padding-left: 7px;
   }
 }/*# sourceMappingURL=style.css.map */

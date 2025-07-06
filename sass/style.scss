@@ -271,7 +271,7 @@
         justify-content: space-between;
         &_txt {
             height: 70px;
-            width: 250px;
+            width: 400px;
             display: block;
             color: black;
             padding-top: 15px;
@@ -290,6 +290,7 @@
             &-svg {
                 width: 25px;
                 height: 25px;
+                cursor: pointer;
                 fill: transparent;
                 stroke: #101010;
                 transition: fill 0.3s, stroke 0.3s;
@@ -397,6 +398,16 @@
             }
         }
     }
+    .card {
+        &__info {
+            &_icon {
+                &-svg:hover {
+                    fill: url(#heart-color1);
+                    stroke: url(#heart-color1);
+                }
+            }
+        }
+    }
 }
 
 // ----------------------------------------------------------- wide desktop ------------------------------------------------------------- \\
@@ -463,6 +474,11 @@
         &__img {
             width: inherit;
             left: 0;
+        }
+        &__info {
+            &_txt {
+                padding-left: 7px;
+            }
         }
     }
 }
