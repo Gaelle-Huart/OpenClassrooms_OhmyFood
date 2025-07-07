@@ -263,20 +263,6 @@ input#dessert3:checked + label .choice__txt {
 
 // ---------------------------------------------------------- purchase ---------------------------------------------------------- \\
 
-//.choice:hover .choice__price {
-//  animation: right-slide .3s ease-in;
-//}
-
-// .choice:hover .check {
-//   display: flex;
-//   width: 74px;
-//   align-items: center;
-//   justify-content: center;
-//   -webkit-animation: right-slide .3s ease-in;
-//   animation: right-slide .3s ease-in;
-//   transform-origin: right;
-// }
-
 .purchase {
   display: flex;
   align-content: center;
@@ -370,5 +356,17 @@ input#dessert3:checked + label .choice__txt {
     max-width: 1055px;
     margin: 0 auto;
     margin-top: -55px;
+  }
+  .choice:hover .choice__price {
+    transform: translateX(-59px);
+    transform-origin: right;
+  }
+  .choice:hover .check {
+    transform: translateX(0);
+    transform-origin: right;
+  }
+  .menu-like__icon_svg:hover {
+    fill: url(#heart-color5);
+    stroke: url(#heart-color5);
   }
 }

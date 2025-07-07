@@ -601,4 +601,16 @@ input#dessert3:checked + label .choice__txt {
     margin: 0 auto;
     margin-top: -55px;
   }
+  .choice:hover .choice__price {
+    transform: translateX(-59px);
+    transform-origin: right;
+  }
+  .choice:hover .check {
+    transform: translateX(0);
+    transform-origin: right;
+  }
+  .menu-like__icon_svg:hover {
+    fill: url(#heart-color5);
+    stroke: url(#heart-color5);
+  }
 }/*# sourceMappingURL=menu.css.map */
