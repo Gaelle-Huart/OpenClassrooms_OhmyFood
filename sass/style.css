@@ -139,6 +139,14 @@ button {
     padding-top: 2px;
     align-self: center;
   }
+  .ohmy-menu {
+    height: 96px;
+  }
+  .ohmy-menu__logo {
+    height: 34px;
+    padding-top: 2px;
+    align-self: center;
+  }
 }
 * {
   margin: 0;
