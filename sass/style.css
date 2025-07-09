@@ -574,37 +574,50 @@ button {
   width: 25px;
   height: 25px;
   cursor: pointer;
-  fill: transparent;
-  stroke: #101010;
-  transition: fill 0.3s, stroke 0.3s;
 }
 .card__info_icon-input1[type=checkbox] {
   display: none;
 }
-.card__info_icon-input1[type=checkbox]:checked + label svg {
-  fill: url(#heart-color1);
-  stroke: url(#heart-color1);
+.card__info_icon-input1[type=checkbox]:checked + label svg .heart-stroke1 {
+  opacity: 0;
+}
+.card__info_icon-input1[type=checkbox]:checked + label svg .heart-fill1 {
+  opacity: 1;
 }
 .card__info_icon-input2[type=checkbox] {
   display: none;
 }
-.card__info_icon-input2[type=checkbox]:checked + label svg {
-  fill: url(#heart-color2);
-  stroke: url(#heart-color2);
+.card__info_icon-input2[type=checkbox]:checked + label svg .heart-stroke2 {
+  opacity: 0;
+}
+.card__info_icon-input2[type=checkbox]:checked + label svg .heart-fill2 {
+  opacity: 1;
 }
 .card__info_icon-input3[type=checkbox] {
   display: none;
 }
-.card__info_icon-input3[type=checkbox]:checked + label svg {
-  fill: url(#heart-color3);
-  stroke: url(#heart-color3);
+.card__info_icon-input3[type=checkbox]:checked + label svg .heart-stroke3 {
+  opacity: 0;
+}
+.card__info_icon-input3[type=checkbox]:checked + label svg .heart-fill3 {
+  opacity: 1;
 }
 .card__info_icon-input4[type=checkbox] {
   display: none;
 }
-.card__info_icon-input4[type=checkbox]:checked + label svg {
-  fill: url(#heart-color4);
-  stroke: url(#heart-color4);
+.card__info_icon-input4[type=checkbox]:checked + label svg .heart-stroke4 {
+  opacity: 0;
+}
+.card__info_icon-input4[type=checkbox]:checked + label svg .heart-fill4 {
+  opacity: 1;
+}
+
+.heart-stroke1, .heart-stroke2, .heart-stroke3, .heart-stroke4 {
+  transition: opacity 0.5s ease;
+}
+
+.heart-fill1, .heart-fill2, .heart-fill3, .heart-fill4 {
+  transition: opacity 0.6s ease;
 }
 
 @media screen and (min-width: 768px) {
@@ -670,10 +683,6 @@ button {
   }
   .instructions__step_info {
     width: 308px;
-  }
-  .card__info_icon-svg:hover {
-    fill: url(#heart-color1);
-    stroke: url(#heart-color1);
   }
 }
 @media screen and (min-width: 1281px) {

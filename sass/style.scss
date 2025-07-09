@@ -290,40 +290,52 @@
                 width: 25px;
                 height: 25px;
                 cursor: pointer;
-                fill: transparent;
-                stroke: #101010;
-                transition: fill 0.3s, stroke 0.3s;
             }
             &-input1[type=checkbox] {
                 display: none;
-                &:checked + label svg {
-                    fill: url(#heart-color1);
-                    stroke: url(#heart-color1);
+                &:checked + label svg .heart-stroke1 {
+                    opacity: 0;
+                }
+                &:checked + label svg .heart-fill1 {
+                    opacity: 1;
                 }
             }
             &-input2[type=checkbox] {
                 display: none;
-                &:checked + label svg {
-                    fill: url(#heart-color2);
-                    stroke: url(#heart-color2);
+                &:checked + label svg .heart-stroke2 {
+                    opacity: 0;
+                }
+                &:checked + label svg .heart-fill2 {
+                    opacity: 1;
                 }
             }
             &-input3[type=checkbox] {
                 display: none;
-                &:checked + label svg {
-                    fill: url(#heart-color3);
-                    stroke: url(#heart-color3);
+                &:checked + label svg .heart-stroke3 {
+                    opacity: 0;
+                }
+                &:checked + label svg .heart-fill3 {
+                    opacity: 1;
                 }
             }
             &-input4[type=checkbox] {
                 display: none;
-                &:checked + label svg {
-                    fill: url(#heart-color4);
-                    stroke: url(#heart-color4);
+                &:checked + label svg .heart-stroke4 {
+                    opacity: 0;
+                }
+                &:checked + label svg .heart-fill4 {
+                    opacity: 1;
                 }
             }
         }  
     }
+}
+
+.heart-stroke1, .heart-stroke2, .heart-stroke3, .heart-stroke4 { // <-- solution à deux paths, jouer sur l'opacité pour faire la transition
+  transition: opacity .5s ease;
+}
+.heart-fill1, .heart-fill2, .heart-fill3, .heart-fill4 {
+  transition: opacity .6s ease;
 }
 
 // ----------------------------------------------------------- Media Queries ------------------------------------------------------------ \\
@@ -394,16 +406,6 @@
             width: 335px;
             &_info {
                 width: 308px;
-            }
-        }
-    }
-    .card {
-        &__info {
-            &_icon {
-                &-svg:hover {
-                    fill: url(#heart-color1);
-                    stroke: url(#heart-color1);
-                }
             }
         }
     }

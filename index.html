@@ -88,14 +88,25 @@
                             <div class="card__info_icon">
                                 <input class="card__info_icon-input1" type="checkbox" id="color-trigger1"> <!-- détecte le clic -->
                                 <label for="color-trigger1"> <!-- associe le clic à l'input, for= permet de colorer l'icône -->
-                                    <svg class="card__info_icon-svg" viewBox="0 0 24 23" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C22.0187 4.12419 22.1558 8.32368 19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"/>
+                                    <svg class="card__info_icon-svg" viewBox="0 0 24 23" xmlns="http://www.w3.org/2000/svg"> <!-- envisager des icônes au lieu du svg pourrait alléger le fichier puisque elles prennent moins de place que les paths à rallonge -->
                                         <defs> <!-- spécifie le dégradé à l'intérieur du coeur -->
                                             <linearGradient id="heart-color1" x1="0%" x2="0%" y1="0%" y2="100%">
-                                                <stop offset="0%" stop-color="#9356DC" />
-                                                <stop offset="100%" stop-color="#FF79DA" />
+                                                <stop offset="0%" stop-color="#9356DC"/>
+                                                <stop offset="100%" stop-color="#FF79DA"/>
                                             </linearGradient>
                                         </defs>
+                                        <path class="heart-stroke1"
+                                            d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C22.0187 4.12419 22.1558 8.32368 19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
+                                            fill="transparent"
+                                            stroke="black"
+                                            stroke-width="1"
+                                        />
+                                        <path class="heart-fill1"
+                                            d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C22.0187 4.12419 22.1558 8.32368 19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
+                                            fill="url(#heart-color1)"
+                                            stroke="url(#heart-color1)"
+                                            opacity="0"
+                                        />
                                     </svg>
                                 </label>
                             </div>
@@ -118,14 +129,25 @@
                             <div class="card__info_icon">
                                 <input class="card__info_icon-input2" type="checkbox" id="color-trigger2"> <!-- détecte le clic -->
                                 <label for="color-trigger2"> <!-- associe le clic à l'input, for= permet de colorer l'icône -->
-                                    <svg class="card__info_icon-svg" viewBox="0 0 24 23" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C22.0187 4.12419 22.1558 8.32368 19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"/>
+                                    <svg class="card__info_icon-svg" viewBox="0 0 24 23" xmlns="http://www.w3.org/2000/svg"> <!-- envisager des icônes au lieu du svg pourrait alléger le fichier puisque elles prennent moins de place que les paths à rallonge -->
                                         <defs> <!-- spécifie le dégradé à l'intérieur du coeur -->
                                             <linearGradient id="heart-color2" x1="0%" x2="0%" y1="0%" y2="100%">
-                                                <stop offset="0%" stop-color="#9356DC" />
-                                                <stop offset="100%" stop-color="#FF79DA" />
+                                                <stop offset="0%" stop-color="#9356DC"/>
+                                                <stop offset="100%" stop-color="#FF79DA"/>
                                             </linearGradient>
                                         </defs>
+                                        <path class="heart-stroke2"
+                                            d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C22.0187 4.12419 22.1558 8.32368 19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
+                                            fill="transparent"
+                                            stroke="black"
+                                            stroke-width="1"
+                                        />
+                                        <path class="heart-fill2"
+                                            d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C22.0187 4.12419 22.1558 8.32368 19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
+                                            fill="url(#heart-color2)"
+                                            stroke="url(#heart-color2)"
+                                            opacity="0"
+                                        />
                                     </svg>
                                 </label>
                             </div>
@@ -147,14 +169,25 @@
                             <div class="card__info_icon">
                                 <input class="card__info_icon-input3" type="checkbox" id="color-trigger3"> <!-- détecte le clic -->
                                 <label for="color-trigger3"> <!-- associe le clic à l'input, for= permet de colorer l'icône -->
-                                    <svg class="card__info_icon-svg" viewBox="0 0 24 23" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C22.0187 4.12419 22.1558 8.32368 19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"/>
+                                    <svg class="card__info_icon-svg" viewBox="0 0 24 23" xmlns="http://www.w3.org/2000/svg"> <!-- envisager des icônes au lieu du svg pourrait alléger le fichier puisque elles prennent moins de place que les paths à rallonge -->
                                         <defs> <!-- spécifie le dégradé à l'intérieur du coeur -->
                                             <linearGradient id="heart-color3" x1="0%" x2="0%" y1="0%" y2="100%">
-                                                <stop offset="0%" stop-color="#9356DC" />
-                                                <stop offset="100%" stop-color="#FF79DA" />
+                                                <stop offset="0%" stop-color="#9356DC"/>
+                                                <stop offset="100%" stop-color="#FF79DA"/>
                                             </linearGradient>
                                         </defs>
+                                        <path class="heart-stroke3"
+                                            d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C22.0187 4.12419 22.1558 8.32368 19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
+                                            fill="transparent"
+                                            stroke="black"
+                                            stroke-width="1"
+                                        />
+                                        <path class="heart-fill3"
+                                            d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C22.0187 4.12419 22.1558 8.32368 19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
+                                            fill="url(#heart-color3)"
+                                            stroke="url(#heart-color3)"
+                                            opacity="0"
+                                        />
                                     </svg>
                                 </label>
                             </div>
@@ -176,14 +209,25 @@
                             <div class="card__info_icon">
                                 <input class="card__info_icon-input4" type="checkbox" id="color-trigger4"> <!-- détecte le clic -->
                                 <label for="color-trigger4"> <!-- associe le clic à l'input, for= permet de colorer l'icône -->
-                                    <svg class="card__info_icon-svg" viewBox="0 0 24 23" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C22.0187 4.12419 22.1558 8.32368 19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"/>
+                                    <svg class="card__info_icon-svg" viewBox="0 0 24 23" xmlns="http://www.w3.org/2000/svg"> <!-- envisager des icônes au lieu du svg pourrait alléger le fichier puisque elles prennent moins de place que les paths à rallonge -->
                                         <defs> <!-- spécifie le dégradé à l'intérieur du coeur -->
                                             <linearGradient id="heart-color4" x1="0%" x2="0%" y1="0%" y2="100%">
-                                                <stop offset="0%" stop-color="#9356DC" />
-                                                <stop offset="100%" stop-color="#FF79DA" />
+                                                <stop offset="0%" stop-color="#9356DC"/>
+                                                <stop offset="100%" stop-color="#FF79DA"/>
                                             </linearGradient>
                                         </defs>
+                                        <path class="heart-stroke4"
+                                            d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C22.0187 4.12419 22.1558 8.32368 19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
+                                            fill="transparent"
+                                            stroke="black"
+                                            stroke-width="1"
+                                        />
+                                        <path class="heart-fill4"
+                                            d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C22.0187 4.12419 22.1558 8.32368 19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
+                                            fill="url(#heart-color4)"
+                                            stroke="url(#heart-color4)"
+                                            opacity="0"
+                                        />
                                     </svg>
                                 </label>
                             </div>

@@ -51,20 +51,28 @@
     display: inline-block;
     padding-right: 22px;
     padding-top: 4px;
-    &_svg {
+    &_svg {                // <-- impossible de faire une transition entre une couleur (y compris transparent) vers une url (gradient)
       width: 23px;
       height: 24px;
-      fill: transparent;
-      stroke: #101010;
+      cursor: pointer;
     }
     &_input5[type=checkbox] {
       display: none;
-      &:checked + label svg {
-        fill: url(#heart-color5);
-        stroke: url(#heart-color5);
+      &:checked + label svg .heart-stroke {
+        opacity: 0;
+      }
+      &:checked + label svg .heart-fill {
+        opacity: 1;
       }
     }
   }
+}
+
+.heart-stroke {           // <-- solution à deux paths, jouer sur l'opacité pour faire la transition
+  transition: opacity .5s ease;
+}
+.heart-fill {
+  transition: opacity .6s ease;
 }
 
 // ------------------------------------------------------ entrees, plats, desserts ------------------------------------------------------ \\
@@ -364,9 +372,5 @@ input#dessert3:checked + label .choice__txt {
   .choice:hover .check {
     transform: translateX(0);
     transform-origin: right;
-  }
-  .menu-like__icon_svg:hover {
-    fill: url(#heart-color5);
-    stroke: url(#heart-color5);
   }
 }

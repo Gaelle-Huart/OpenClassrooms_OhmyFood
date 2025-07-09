@@ -312,15 +312,24 @@ button {
 .menu-like__icon_svg {
   width: 23px;
   height: 24px;
-  fill: transparent;
-  stroke: #101010;
+  cursor: pointer;
 }
 .menu-like__icon_input5[type=checkbox] {
   display: none;
 }
-.menu-like__icon_input5[type=checkbox]:checked + label svg {
-  fill: url(#heart-color5);
-  stroke: url(#heart-color5);
+.menu-like__icon_input5[type=checkbox]:checked + label svg .heart-stroke {
+  opacity: 0;
+}
+.menu-like__icon_input5[type=checkbox]:checked + label svg .heart-fill {
+  opacity: 1;
+}
+
+.heart-stroke {
+  transition: opacity 0.5s ease;
+}
+
+.heart-fill {
+  transition: opacity 0.6s ease;
 }
 
 .select {
@@ -608,9 +617,5 @@ input#dessert3:checked + label .choice__txt {
   .choice:hover .check {
     transform: translateX(0);
     transform-origin: right;
-  }
-  .menu-like__icon_svg:hover {
-    fill: url(#heart-color5);
-    stroke: url(#heart-color5);
   }
 }/*# sourceMappingURL=menu.css.map */
